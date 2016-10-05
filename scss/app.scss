@@ -4,9 +4,32 @@
 @import 'foundation';
 @import 'motion-ui';
 
+@import 'toolkit';
+
+@font-face {
+    font-family: Brandon;
+    src: url('../fonts/Brandon_reg.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Brandon;
+    src: url('../fonts/Brandon_bld.otf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Brandon;
+    src: url('../fonts/Brandon_blk.otf');
+    font-weight: 700;
+    font-style: normal;
+}
+
 @include foundation-global-styles;
-@include foundation-grid;
-// @include foundation-flex-grid;
+// @include foundation-grid;
+@include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
@@ -44,7 +67,59 @@
 @include foundation-top-bar;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
-// @include foundation-flex-classes;
+@include foundation-flex-classes;
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+h1 {
+    font-weight: 700;
+}
+
+.underline {
+    @include underline($body-background, $body-font-color);
+}
+
+.gold {
+    color: $gold;
+}
+
+.container {
+    min-height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+nav a {
+    color: $body-font-color;
+}
+
+.white {
+    color: $light-gray;
+}
+
+a.white {
+    &:hover {
+        color: $white;
+    }
+
+    &:active, &:visited {
+        color: $light-gray;
+    }
+}
+
+.logo {
+    width: 8%;
+    min-width: rem-calc(60);
+}
+
+.hidden {
+    display: none;
+}
