@@ -20,6 +20,7 @@
   },
   "private": true,
   "devDependencies": {
-    "sass-toolkit": "^2.10.0"
+    "sass-toolkit": "^2.10.0",
+    "modular-scale": "^2.1.3"
   }
 }

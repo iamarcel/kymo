@@ -1,5 +1,9 @@
 @charset 'utf-8';
 
+@import 'modular-scale';
+$ms-base: 1rem;
+$ms-ratio: 1.5;
+
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
@@ -15,15 +19,22 @@
 
 @font-face {
     font-family: Brandon;
+    src: url('../fonts/Brandon_med.otf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Brandon;
     src: url('../fonts/Brandon_bld.otf');
-    font-weight: 500;
+    font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: Brandon;
     src: url('../fonts/Brandon_blk.otf');
-    font-weight: 700;
+    font-weight: 900;
     font-style: normal;
 }
 
@@ -72,6 +83,17 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+$global-border-width: 2px;
+$global-border-style: $global-border-width solid $white;
+
+@import 'components/header';
+@import 'components/social';
+@import 'components/footer';
+
+@import 'components/home';
+@import 'components/portfolio';
+@import 'components/portfolio-item';
+
 h1 {
     font-weight: 700;
 }
@@ -84,17 +106,9 @@ h1 {
     color: $gold;
 }
 
-.container {
-    min-height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-}
-
 main {
-    flex-grow: 1;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+    padding: $header-height ms(1) $footer-height ms(1);
+    min-height: 100%;
 }
 
 nav a {
@@ -115,11 +129,10 @@ a.white {
     }
 }
 
-.logo {
-    width: 8%;
-    min-width: rem-calc(60);
-}
-
 .hidden {
     display: none;
+}
+
+.image-link {
+    display: block;
 }

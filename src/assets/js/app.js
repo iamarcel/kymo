@@ -89,4 +89,26 @@ $(function () {
         });
     });
 
+
+
+
+    // Add border to header and footer when scrolled
+    var isScrolledToTop = function () {
+        return window.scrollY <= 0;
+    };
+    var isScrolledToBottom = function () {
+        return window.innerHeight + window.scrollY >= document.body.scrollHeight;
+    };
+
+    var toggleBorders = function () {
+        $('header').toggleClass('border', !isScrolledToTop());
+        $('footer').toggleClass('border', !isScrolledToBottom());
+    };
+
+    $(document).on('scroll', function () {
+        toggleBorders();
+    });
+
+    toggleBorders();
+
 });

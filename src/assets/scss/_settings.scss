@@ -73,6 +73,10 @@ $global-radius: 0;
 $global-text-direction: ltr;
 $global-flexbox: true;
 $print-transparent-backgrounds: true;
+$header-height: 5rem;
+$footer-height: ms(3);
+
+
 
 @include add-foundation-colors;
 
@@ -94,8 +98,8 @@ $breakpoint-classes: (small medium large);
 $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
-  small: 20px,
-  medium: 30px,
+  small: ms(2),
+  medium: ms(3)
 );
 $grid-column-align-edge: true;
 $block-grid-max: 8;
@@ -104,7 +108,7 @@ $block-grid-max: 8;
 // ------------------
 
 $header-font-family: $body-font-family;
-$header-font-weight: normal;
+$header-font-weight: bold;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (

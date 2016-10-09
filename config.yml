@@ -27,6 +27,7 @@ PATHS:
     - "bower_components/foundation-sites/scss"
     - "bower_components/motion-ui/src"
     - "bower_components/sass-toolkit/stylesheets"
+    - "bower_components/modular-scale/stylesheets"
   # Paths to JavaScript libraries, which are compined into one file
   javascript:
     # Libraries requried by Foundation
