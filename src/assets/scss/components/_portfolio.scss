@@ -1,0 +1,47 @@
+.portfolio {
+    @include flex-grid-row();
+
+    $item-selector: '.portfolio__item';
+
+    @mixin portfolio-layout($n) {
+        @include flex-grid-layout($n, $item-selector);
+
+        &__item {
+
+            border: $global-border-style;
+            border-top: 0;
+
+            // Give the first row a top border
+            @for $this-n from 0 through $n {
+                &:nth-child(#{$this-n}) {
+                    border-top: $global-border-style;
+                }
+
+            }
+
+            // Remove double inside borders
+            @if $n > 1 {
+                @for $this-n from 0 through ($n - 2) {
+                    &:nth-child(#{$n}n + #{$this-n + 1}):not(:last-child) {
+                        border-right: 0;
+                    }
+                }
+            }
+
+        }
+    }
+
+    @include breakpoint(small only) {
+        @include portfolio-layout(1);
+    }
+    @include breakpoint(medium only) {
+        @include portfolio-layout(2);
+    }
+    @include breakpoint(large) {
+        @include portfolio-layout(4);
+    }
+
+    &__item {
+        @include flex-grid-column();
+    }
+}

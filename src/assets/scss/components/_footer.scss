@@ -1,0 +1,23 @@
+footer {
+    @include flex-grid-row(null, 100%);
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: $footer-height;
+    z-index: 100;
+
+    background: $body-background;
+
+    transition: border-width 0.1s ease-in-out;
+    border-top: $global-border-style;
+    border-top-width: 0;
+    &.border {
+        border-top-width: $global-border-width;
+    }
+
+    & > aside {
+        @include flex-grid-column();
+    }
+}

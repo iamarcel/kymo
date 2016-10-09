@@ -1,0 +1,13 @@
+.social-logo {
+    height: 1em;
+}
+
+ul.social-icons {
+    @extend .no-bullet;
+    @include flex-grid-row(nest, 100%);
+    margin: ms(1)/2 0;
+
+    li {
+        @include flex-grid-column(shrink);
+    }
+}

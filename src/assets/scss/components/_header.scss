@@ -1,0 +1,35 @@
+header {
+    @include flex-grid-row(null, 100%);
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: $header-height;
+    z-index: 100;
+
+    padding: 0 1rem;
+    background: $body-background;
+
+    transition: border-width 0.1s ease-in-out;
+    border-bottom: $global-border-style;
+    border-bottom-width: 0;
+    &.border {
+        border-bottom-width: $global-border-width;
+    }
+
+    .logo {
+        @include flex-grid-column();
+        @include breakpoint(medium) {
+            @include flex-grid-column(shrink);
+        }
+
+        height: $header-height;
+
+        > img {
+            display: block;
+            width: 100%;
+            max-height: 100%;
+        }
+    }
+}
