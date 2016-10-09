@@ -1,0 +1,17 @@
+.portfolio {
+    @include flex-grid-row();
+    @include flex-grid-layout(4);
+}
+
+.portfolio-item {
+    @include flex-grid-column();
+
+    &__image {
+        max-width: 100%;
+    }
+
+    &__heading {
+        @extend h4;
+    }
+
+}
