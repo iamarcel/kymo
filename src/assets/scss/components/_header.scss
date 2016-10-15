@@ -1,5 +1,7 @@
 header {
-    @include flex-grid-row(null, 100%);
+    @include flex-grid-row($width: 100%);
+    align-items: center;
+    justify-content: space-between;
 
     position: fixed;
     left: 0;

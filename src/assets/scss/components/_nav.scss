@@ -1,0 +1,16 @@
+.nav {
+    @include flex-grid-column;
+    @include flex-grid-row($behavior: nest);
+
+    a {
+        color: $body-font-color;
+    }
+
+    &__col {
+        @include flex-grid-column();
+    }
+}
+
+*:not(.page--index) .nav__col {
+    text-align: right;
+}

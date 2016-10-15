@@ -9,16 +9,14 @@
         <title>KYMO ONE</title>
         <link rel="stylesheet" href="{{root}}assets/css/app.css">
     </head>
-    <body>
+    <body class="page--{{page}}">
 
-        <header>
-            <a href="{{root}}/" class="logo"><img src="assets/img/logo.svg"></a>
-        </header>
+        {{> header}}
 
         {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
         {{> body}}
 
-        <footer>
+        <footer class="footer">
             <aside class="footer__left">
                 <ul class="social-icons">
                     <li>
@@ -38,9 +36,9 @@
                     </li>
                 </ul>
             </aside>
-            <!-- <aside class="footer__right">
-                 
-                 </aside> -->
+            <aside class="footer__right">
+                <a href="mailto:herp@derp.com">Contact</a>
+            </aside>
         </footer>
 
         <script src="{{root}}assets/js/app.js"></script>

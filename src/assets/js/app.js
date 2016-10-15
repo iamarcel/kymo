@@ -49,7 +49,7 @@ $(function () {
                     if (i === 0) {
                         $ellipsisEl.addClass('hidden');
                     }
-                }, iHidden * 100));
+                }, iHidden * 600 / nHidden));
 
                 iHidden++;
             }
@@ -81,7 +81,7 @@ $(function () {
                     if (nNotHidden - iNotHidden === 0) {
                         $ellipsisEl.removeClass('hidden');
                     }
-                }, (nNotHidden - iNotHidden) * 100));
+                }, (nNotHidden - iNotHidden) * 600 / nNotHidden));
 
                 iNotHidden++;
             }

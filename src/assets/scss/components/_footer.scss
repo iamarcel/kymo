@@ -1,5 +1,6 @@
-footer {
-    @include flex-grid-row(null, 100%);
+.footer {
+    @include flex-grid-row($width: 100%);
+    @include flex-align($y: middle);
 
     position: fixed;
     bottom: 0;
@@ -19,5 +20,9 @@ footer {
 
     & > aside {
         @include flex-grid-column();
+    }
+
+    &__right {
+        text-align: right;
     }
 }

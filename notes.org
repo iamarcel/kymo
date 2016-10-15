@@ -1,6 +1,8 @@
 
 * Home page
 
-** TODO Social media links
+** DONE Social media links
+CLOSED: [2016-10-15 za 09:22]
 
-** TODO Link naar contactpagina
+** DONE Link naar contactpagina
+CLOSED: [2016-10-15 za 09:22]

@@ -5,4 +5,9 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+
+    .nav__item {
+        font-size: ms(3);
+        font-weight: bold;
+    }
 }
