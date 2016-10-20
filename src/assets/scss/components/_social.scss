@@ -4,10 +4,16 @@
 
 ul.social-icons {
     @extend .no-bullet;
-    @include flex-grid-row(nest, 100%);
+    @include flex-grid-row($behavior: collapse, $width: 100%);
     margin: ms(1)/2 0;
 
     li {
-        @include flex-grid-column(shrink);
+        @include flex-grid-column($columns: shrink, $gutter: 0);
+        padding-left: ms(1)/2;
+        padding-right: ms(1)/2;
+
+        &:first-child {
+            padding-left: 0;
+        }
     }
 }

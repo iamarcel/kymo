@@ -1,5 +1,4 @@
 .nav {
-    @include flex-grid-column;
     @include flex-grid-row($behavior: nest);
 
     a {
@@ -8,9 +7,6 @@
 
     &__col {
         @include flex-grid-column();
+        flex-grow: 0;
     }
-}
-
-*:not(.page--index) .nav__col {
-    text-align: right;
 }

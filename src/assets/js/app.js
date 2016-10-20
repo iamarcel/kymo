@@ -2,91 +2,39 @@ $(document).foundation();
 
 $(function () {
 
-    $('.type-on-hover__text').each(function (index, el) {
-        var $el = $(el);
-        var text = $el.text();
-        $el.empty();
-        var letters = text.split('');
+    let calculateHoverTextWidths = _ => {
+        $('.type-on-hover__ellipsis').each((index, el) => {
+            const $el = $(el);
+            const width = $el.width('').width();
+            el.setAttribute('data-width', width);
+            $el.width(width);
+        });
 
-        for (var i = 0; i < letters.length; i++) {
-            var textElement = document.createElement('span');
-            textElement.className = 'type-on-hover__letter hidden';
-            textElement.innerHTML = letters[i];
+        $('.type-on-hover__text').each(function (index, el) {
+            const $el = $(el);
+            const width = $el.width('').width();
+            $el.attr('data-width', width);
+            $el.width(0);
+        });
+    };
 
-            $el.append(textElement);
-        }
-
-        var ellipsisElement = document.createElement('span');
-        ellipsisElement.className = 'type-on-hover__ellipsis';
-        ellipsisElement.innerHTML = '&hellip;';
-        $el.append(ellipsisElement);
-
-        $el.removeClass('hidden');
-    });
 
     $('.type-on-hover').on('mouseover', function (event) {
-        var $target = $(event.currentTarget);
-        var $ellipsisEl = $target.find('.type-on-hover__ellipsis');
-        var els = $target.find('.type-on-hover__letter');
+        let $target = $(event.currentTarget);
+        let $ellipsisEl = $target.find('.type-on-hover__ellipsis');
 
-        var length = els.length;
-        var nHidden = els.filter('.hidden').length;
-        var iHidden = 0;
-
-        els.each(function (index, el) {
-            var animation = el.getAttribute('data-animation');
-            if (animation) {
-                clearTimeout(animation);
-            }
-
-            var $el = $(el);
-            if ($el.hasClass('hidden')) {
-                var i = iHidden;
-
-                el.setAttribute('data-animation', setTimeout(function () {
-                    $(el).removeClass('hidden');
-
-                    if (i === 0) {
-                        $ellipsisEl.addClass('hidden');
-                    }
-                }, iHidden * 600 / nHidden));
-
-                iHidden++;
-            }
-        });
+        let $textEl = $target.find('.type-on-hover__text');
+        $textEl.width($textEl.attr('data-width'));
+        $ellipsisEl.width(0);
     });
 
     $('.type-on-hover').on('mouseout', function (event) {
-        var $target = $(event.currentTarget);
-        var $ellipsisEl = $target.find('.type-on-hover__ellipsis');
-        var els = $target.find('.type-on-hover__letter');
+        let $target = $(event.currentTarget);
+        let $ellipsisEl = $target.find('.type-on-hover__ellipsis');
 
-        var length = els.length;
-        var nNotHidden = els.filter(':not(.hidden)').length;
-        var iNotHidden = 0;
-
-        els.each(function (index, el) {
-            var animation = el.getAttribute('data-animation');
-            if (animation) {
-                clearTimeout(animation);
-            }
-
-            var $el = $(el);
-            if (!$el.hasClass('hidden')) {
-                var i = iNotHidden;
-
-                el.setAttribute('data-animation', setTimeout(function () {
-                    $(el).addClass('hidden');
-
-                    if (nNotHidden - iNotHidden === 0) {
-                        $ellipsisEl.removeClass('hidden');
-                    }
-                }, (nNotHidden - iNotHidden) * 600 / nNotHidden));
-
-                iNotHidden++;
-            }
-
-        });
+        let $textEl = $target.find('.type-on-hover__text');
+        $textEl.width(0);
+        $ellipsisEl.width($ellipsisEl.attr('data-width'));
     });
 
 
@@ -109,6 +57,9 @@ $(function () {
         toggleBorders();
     });
 
+    $(window).on('resize', calculateHoverTextWidths);
+
     toggleBorders();
+    calculateHoverTextWidths();
 
 });

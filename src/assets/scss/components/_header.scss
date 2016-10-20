@@ -1,37 +1,51 @@
 header {
-    @include flex-grid-row($width: 100%);
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    height: 1.6*$header-height;
+
+    @include breakpoint(medium) {
+        @include flex-grid-row($width: 100);
+        flex-direction: row;
+        justify-content: space-between;
+        height: $header-height;
+    }
 
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
-    height: $header-height;
     z-index: 100;
 
-    padding: 0 1rem;
+    padding: 0 ms(1);
     background: $body-background;
 
     transition: border-width 0.1s ease-in-out;
     border-bottom: $global-border-style;
     border-bottom-width: 0;
+
     &.border {
         border-bottom-width: $global-border-width;
+        box-shadow: 0 2px 3px rgba(0,0,0,.5);
     }
 
     .logo {
+        display: block;
         @include flex-grid-column();
         @include breakpoint(medium) {
             @include flex-grid-column(shrink);
         }
 
+        padding: ms(1) 0 ms(1) 0;
+        padding-left: 0 !important;
+
         height: $header-height;
 
-        > img {
+        > svg {
             display: block;
             width: 100%;
             max-height: 100%;
+            min-height: ms(1);
         }
     }
 }

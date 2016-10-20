@@ -38,6 +38,7 @@ $ms-ratio: 1.5;
     font-style: normal;
 }
 
+
 @include foundation-global-styles;
 // @include foundation-grid;
 @include foundation-flex-grid;
@@ -109,7 +110,12 @@ h1 {
 }
 
 main {
-    padding: $header-height 0 $footer-height 0;
+    padding: 1.6*$header-height 0 $footer-height 0;
+
+    @include breakpoint(medium) {
+        padding-top: $header-height;
+    }
+
     min-height: 100%;
 }
 
@@ -133,4 +139,25 @@ a.white {
 
 .image-link {
     display: block;
+}
+
+.type-on-hover {
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+
+    &--left {
+        .type-on-hover__ellipsis, .type-on-hover__text {
+            direction: rtl;
+        }
+    }}
+
+.type-on-hover__text, .type-on-hover__ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    transition: width .4s ease-out;
+}
+
+.portfolio-title {
+    margin-bottom: 2em;
 }
