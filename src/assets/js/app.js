@@ -2,6 +2,10 @@ $(document).foundation();
 
 $(function () {
 
+    $('.type-on-hover__text').each((index, el) => {
+
+    });
+
     let calculateHoverTextWidths = _ => {
         $('.type-on-hover__ellipsis').each((index, el) => {
             const $el = $(el);
@@ -54,7 +58,8 @@ $(function () {
     };
 
     $(document).on('scroll', function () {
-        toggleBorders();
+        // toggleBorders();
+        // $('header').css('border-width', window.scrollY / 20);
     });
 
     $(window).on('resize', calculateHoverTextWidths);

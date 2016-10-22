@@ -1,5 +1,5 @@
 .portfolio {
-    @include flex-grid-row($width: 100%, $behavior: collapse);
+    @include flex-grid-row($width: 100%);
     $item-selector: '.portfolio__item';
 
     // @mixin portfolio-layout($n) {
@@ -37,22 +37,28 @@
         @include flex-grid-layout(2, $item-selector);
     }
     @include breakpoint(large) {
-        @include flex-grid-layout(4, $item-selector);
+        @include flex-grid-layout(3, $item-selector);
     }
 
 
 
     &__item {
-        position: relative;
-        $pad: map-get($grid-column-gutter, small) / 2;
+        @include flex-grid-column($gutter: ms(2));
+        $pad: ms(2);
         @include breakpoint(medium) {
-            $pad: map-get($grid-column-gutter, medium) / 2;
+            @include flex-grid-column($gutter: ms(6));
+            $pad: ms(5);
+        }
+
+        & > * {
+            display: block;
+            position: relative;
         }
 
         &__preview {
             max-width: 100%;
             @include intrinsic-ratio(1);
-            // margin-bottom: $pad;
+            margin-bottom: $pad;
         }
 
         &__image {

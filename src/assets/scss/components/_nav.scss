@@ -1,5 +1,8 @@
 .nav {
-    @include flex-grid-row($behavior: nest);
+    @include flex-grid-row;
+    font-weight: bold;
+
+    margin: 0;
 
     a {
         color: $body-font-color;

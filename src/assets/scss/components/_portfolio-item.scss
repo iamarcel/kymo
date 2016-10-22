@@ -1,4 +1,16 @@
 .portfolio-item {
-    @include flex-grid-row($width: 100%, $behavior: collapse);
-    @include flex-align($x: spaced, $y: middle);
+    position: relative;
+    display: flex;
+    flex-flow: nowrap column;
+
+    &__content {
+        @include flex-grid-row($width: 100%, $behavior: collapse);
+        @include flex-align($x: spaced, $y: middle);
+    }
+
+    &__image, &__image img {
+        max-height: 80vh;
+        max-height: calc(100vh - #{$header-height});
+        overflow: hidden;
+    }
 }

@@ -7,7 +7,8 @@ CLOSED: [2016-10-15 za 09:22]
 ** DONE Link naar contactpagina
 CLOSED: [2016-10-15 za 09:22]
 
-** TODO Dancing letters
+** DONE Dancing letters
+   CLOSED: [2016-10-22 za 18:41]
 bedoel je met de vreemde beweging dat ze niet zo uit elkaar mogen schuiven, of
 iets anders? Ik heb zelf al gemerkt dat de timing soms nog fout loopt (de
 letters verschijnen niet altijd aan hetzelfde tempo als je wat met je muis heen
@@ -18,3 +19,11 @@ Dat ook, maar ook dat bijvoorbeeld als je over GRAag hovert, de linker GRA eerst
 terwijl die eigenlijk helemaal niet moet bewegen omdat de "GRAag" plaats genoeg
 heeft
 
+** TODO Letters animation
+Home page: letter-by-letter appear, left-aligned. Just make them change color
+from black to gold.
+
+** TODO Cross-browser compatibility
+Everything breaks on non-Chrome :/
+
+** TODO Info page for portfolio-item
