@@ -1,7 +1,11 @@
 header {
     @include flex-grid-row($width: 100%);
-    @include flex-align($x: justify, $y: middle);
-    height: $header-height;
+    @include flex-align($x: justify, $y: top);
+
+    height: 1.7 * $header-height;
+    @include breakpoint(medium) {
+        height: $header-height;
+    }
 
     position: fixed;
     left: 0;
@@ -12,6 +16,8 @@ header {
     padding: ms(1);
 
     background: $body-background;
+
+    font-weight: bold;
 
     // transition: border-width 0.1s ease-in-out;
     // border-bottom: $global-border-style;
@@ -25,10 +31,17 @@ header {
     .logo {
         position: absolute;
         left: 50%;
-        transform: translateX(-50%);
+        top: 50%;
+
+        transform: translate(-50%, 0);
+
+        @include breakpoint(medium) {
+            transform: translate(-50%, -50%);
+        }
 
         & > svg {
             height: ms(1);
+            width: 100%;
         }
     }
 

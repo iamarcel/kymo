@@ -1,0 +1,32 @@
+{{> header}}
+
+
+<main class="portfolio-item">
+
+    <div class="orbit portfolio-item__content" role="region" data-orbit
+         data-prev-class="nav-arrow--previous"
+         data-next-class="nav-arrow--next"
+         data-use-m-u-i="false"
+         aria-label="Photos for {{project.name}}">
+        <aside class="nav-arrow nav-arrow--previous">
+            <a href="#" class="nav-arrow__icon">
+                <span>&bull;</span>
+            </a>
+        </aside>
+        <ul class="orbit-container portfolio-item__image">
+            {{#each project.photos}}
+            <li class="orbit-slide">
+                <img src="/assets/img/{{../project.short_name}}/{{this}}"
+                     alt="Image for {{project.name}}"
+                     class="orbit-image">
+            </li>
+            {{/each}}
+        </ul>
+        <aside class="nav-arrow nav-arrow--next">
+            <a href="#" class="nav-arrow__icon">
+                <span>&bull;</span>
+            </a>
+        </aside>
+    </div>
+
+</main>

@@ -46,6 +46,10 @@
         @include flex-grid-column($gutter: ms(2));
         $pad: ms(2);
         @include breakpoint(medium) {
+            @include flex-grid-column($gutter: ms(4));
+            $pad: ms(2);
+        }
+        @include breakpoint(large) {
             @include flex-grid-column($gutter: ms(6));
             $pad: ms(5);
         }

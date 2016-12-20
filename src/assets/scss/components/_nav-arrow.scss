@@ -1,6 +1,12 @@
 .nav-arrow {
     align-self: stretch;
-    width: ms(3);
+    width: 100%;
+    height: ms(3);
+
+    @include breakpoint(large) {
+        width: ms(3);
+        height: auto;
+    }
 
 
     &:hover {

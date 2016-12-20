@@ -11,8 +11,6 @@
     </head>
     <body class="page--{{page}}">
 
-        {{> header}}
-
         {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
         {{> body}}
 
@@ -21,23 +19,23 @@
                 <ul class="social-icons">
                     <li>
                         <a href="#">
-                            <img class="social-logo" alt="KYMO ONE on Behance" src="assets/img/social-logo--behance.png"/>
+                            <img class="social-logo" alt="KYMO ONE on Behance" src="{{root}}assets/img/social-logo--behance.png"/>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img class="social-logo" alt="KYMO ONE on Facebook" src="assets/img/social-logo--facebook.png"/>
+                            <img class="social-logo" alt="KYMO ONE on Facebook" src="{{root}}assets/img/social-logo--facebook.png"/>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img class="social-logo" alt="KYMO ONE on Instagram" src="assets/img/social-logo--instagram.png"/>
+                            <img class="social-logo" alt="KYMO ONE on Instagram" src="{{root}}assets/img/social-logo--instagram.png"/>
                         </a>
                     </li>
                 </ul>
             </aside>
             <aside class="footer__right">
-                <a href="mailto:herp@derp.com">Contact</a>
+                <a href="contact.html">Contact</a>
             </aside>
         </footer>
 

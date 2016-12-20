@@ -1,0 +1,13 @@
+{{> header}}
+
+<main class="container">
+
+    <div class="portfolio">
+
+        {{#each portfolio.grafisch}}
+          {{> portfolio__item short_name=this.short_name item=this.thumbnail title=this.name}}
+        {{/each}}
+
+    </div>
+
+</main>

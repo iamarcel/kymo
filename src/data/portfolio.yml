@@ -1,0 +1,27 @@
+graffiti:
+
+  anonymous_skull:
+    name: Anonymous Skull
+    short_name: anonymous-skull
+    thumbnail: anonymous-skull-1.jpg
+    photos:
+      - anonymous-skull-1.jpg
+      - anonymous-skull-2.jpg
+      - anonymous-skull-3.jpg
+      - anonymous-skull-4.jpg
+
+
+grafisch:
+
+  gouden_eeuw:
+    name: Gouden Eeuw
+    short_name: gouden-eeuw
+    thumbnail: gouden-eeuw-1.jpg
+    photos:
+      - gouden-eeuw-1.jpg
+      - gouden-eeuw-2.jpg
+      - gouden-eeuw-3.jpg
+      - gouden-eeuw-4.jpg
+
+
+graag:

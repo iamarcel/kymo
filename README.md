@@ -1,65 +1,70 @@
-# ZURB Template
+# KYMO ONE Website
 
-[![devDependency Status](https://david-dm.org/zurb/foundation-zurb-template/dev-status.svg)](https://david-dm.org/zurb/foundation-zurb-template#info=devDependencies)
+## Nieuw portfolio-item toevoegen
 
-**Please open all issues with this template on the main [Foundation for Sites](https://github.com/zurb/foundation-sites/issues) repo.**
+### Nieuwe entry
 
-This is the official ZURB Template for use with [Foundation for Sites](http://foundation.zurb.com/sites). We use this template at ZURB to deliver static code to our clients. It has a Gulp-powered build system with these features:
+Open `src/data/portfolio.yml` en voeg een nieuwe entry toe, bijvoorbeeld
 
-- Handlebars HTML templates with Panini
-- Sass compilation and prefixing
-- JavaScript concatenation
-- Built-in BrowserSync server
-- For production builds:
-  - CSS compression
-  - JavaScript compression
-  - Image compression
-
-## Installation
-
-To use this template, your computer needs:
-
-- [NodeJS](https://nodejs.org/en/) (0.12 or greater)
-- [Git](https://git-scm.com/)
-
-This template can be installed with the Foundation CLI, or downloaded and set up manually.
-
-### Using the CLI
-
-Install the Foundation CLI with this command:
-
-```bash
-npm install foundation-cli --global
+```yml
+anonymous_skull:
+  name: Anonymous Skull
+  short_name: anonymous-skull
+  thumbnail: anonymous-skull-1.jpg
+  photos:
+    - anonymous-skull-1.jpg
+    - anonymous-skull-2.jpg
+    - anonymous-skull-3.jpg
+    - anonymous-skull-4.jpg
 ```
 
-Use this command to set up a blank Foundation for Sites project with this template:
+### De pagina
 
-```bash
-foundation new --framework sites --template zurb
+Maak een nieuw bestand `src/pages/portfolio/{{short_name}}.html` aan (vervang
+`{{short_name}}` door wat je daar net hebt ingevuld). De inhoud van dat bestand
+is:
+
+```html
+{{> portfolio-item project=portfolio.{{soort}}.{{@key}}}}
 ```
 
-The CLI will prompt you to give your project a name. The template will be downloaded into a folder with this name.
+met `{{soort}}` één van 'graffiti', 'grafisch' of 'graag' en `{{@key}}` wat er
+voor de eerste dubbelpunt staat, hier `anonymous_skull`. (Daar mag geen minteken
+instaan, bijvoorbeeld. Best gewoon kleine letters en underscores---er is toch
+niemand die het ooit zal zien. Bij de `short_name` heb je meer vrijheid.)
 
-### Manual Setup
+### Afbeeldingen
 
-To manually set up the template, first download it with Git:
+Plaats de afbeeldingen als `src/assets/img/{{short_name}}/{{photo}}`, waarbij
+`{{photo}}` een waarde voorstelt die je bij `thumbnail` of `photos` hebt ingevuld.
 
-```bash
-git clone https://github.com/zurb/foundation-zurb-template projectname
+
+
+## De site bouwen
+
+### Installatie
+Nodig: node.js.
+
+Dit hoef je maar één keer te doen. Open je terminal en ga naar deze map. Voer de
+volgende commando's uit.
+
+```sh
+npm i -g foundation-cli
+npm i
 ```
 
-Then open the folder in your command line, and install the needed dependencies:
-
-```bash
-cd projectname
-npm install
-bower install
+### Bekijken
+```sh
+npm start
 ```
 
-Finally, run `npm start` to run Gulp. Your finished site will be created in a folder called `dist`, viewable at this URL:
+Als je aanpassingen maakt, wordt de pagina automatisch herladen. Aanpassingen in
+de `yml`-bestanden worden niet opgepikt, daarvoor zal je moeten stoppen (Ctrl+C)
+en opnieuw het commando uitvoeren.
 
-```
-http://localhost:8000
+### Bouwen om te uploaden
+```sh
+npm run build
 ```
 
-To create compressed, production-ready assets, run `npm run build`.
+Als dat klaar is, gewoon de `dist/`-map ergens naar uploaden.

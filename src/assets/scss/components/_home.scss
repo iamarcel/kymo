@@ -1,6 +1,6 @@
 .home {
     flex-grow: 1;
-    min-height: 100%;
+    // min-height: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -8,6 +8,8 @@
 
     .nav {
         padding-bottom: ms(3);
+        margin: auto;
+        justify-content: center;
     }
 
     .nav__item {
