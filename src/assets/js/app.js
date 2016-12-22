@@ -67,4 +67,20 @@ $(function () {
     toggleBorders();
     calculateHoverTextWidths();
 
+
+
+
+    $(document).keypress(function (event) {
+        var $carousel = $('#carousel');
+        if (!$carousel.length) {
+            return;
+        }
+
+        if (event.keyCode === 37) {
+            $carousel.foundation('changeSlide', false);
+        } else if (event.keyCode === 39) {
+            $carousel.foundation('changeSlide', true);
+        }
+    });
+
 });
