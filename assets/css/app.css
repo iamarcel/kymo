@@ -4183,8 +4183,8 @@ ul.social-icons {
     padding-left: 1.125rem;
     padding-right: 1.125rem;
     min-width: initial;
-    -ms-flex-positive: 0;
-        flex-grow: 0; }
+    -ms-flex: 0 1 auto;
+        flex: 0 1 auto; }
     @media screen and (min-width: 40em) {
       .nav__col {
         padding-left: 1.6875rem;
@@ -4373,6 +4373,10 @@ ul.social-icons {
 
 h1 {
   font-weight: 700; }
+
+:focus {
+  outline-color: transparent;
+  outline-style: none; }
 
 .underline {
   text-decoration: none;
