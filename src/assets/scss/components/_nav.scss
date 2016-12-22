@@ -10,6 +10,6 @@
 
     &__col {
         @include flex-grid-column();
-        flex-grow: 0;
+        flex: 0 1 auto;
     }
 }

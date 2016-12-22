@@ -102,6 +102,11 @@ h1 {
     font-weight: 700;
 }
 
+:focus {
+    outline-color: transparent;
+    outline-style: none;
+}
+
 .underline {
     @include underline($body-background, $body-font-color);
 }
