@@ -4103,8 +4103,8 @@ header {
   font-weight: bold; }
   @media screen and (min-width: 40em) {
     header {
-      -ms-flex-pack: start;
-          justify-content: flex-start; } }
+      -ms-flex-pack: justify;
+          justify-content: space-between; } }
   @media screen and (min-width: 40em) {
     header {
       height: 5rem; } }
