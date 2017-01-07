@@ -4087,22 +4087,30 @@ header {
   display: flex;
   -ms-flex-flow: row wrap;
       flex-flow: row wrap;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  -ms-flex-pack: center;
+      justify-content: center;
   -ms-flex-align: start;
       align-items: flex-start;
-  height: 8.5rem;
+  height: 6rem;
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   z-index: 100;
-  padding: 1.5rem;
+  padding: 0.75rem;
+  padding-bottom: 0;
   background: #000;
   font-weight: bold; }
   @media screen and (min-width: 40em) {
     header {
+      -ms-flex-pack: start;
+          justify-content: flex-start; } }
+  @media screen and (min-width: 40em) {
+    header {
       height: 5rem; } }
+  @media screen and (min-width: 40em) {
+    header {
+      padding: 1.5rem; } }
   header .logo {
     position: absolute;
     left: 50%;
@@ -4189,18 +4197,22 @@ ul.social-icons {
       .nav__col {
         padding-left: 1.6875rem;
         padding-right: 1.6875rem; } }
+  .nav__item {
+    -ms-flex-pack: center;
+        justify-content: center; }
 
 .nav-arrow {
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   width: 100%;
   height: 3.375rem;
   position: relative; }
-  @media screen and (min-width: 64em) {
+  @media screen and (min-width: 40em) {
     .nav-arrow {
       width: 3.375rem;
-      height: auto; } }
+      height: 100%;
+      min-height: 80vh; } }
   .nav-arrow:hover {
     background: rgba(255, 255, 255, 0.1); }
   .nav-arrow > a {
@@ -4219,27 +4231,29 @@ ul.social-icons {
 
 .home {
   -ms-flex-positive: 1;
-      flex-grow: 1;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: column nowrap;
-      flex-flow: column nowrap;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center; }
+      flex-grow: 1; }
   .home .nav {
     padding-bottom: 3.375rem;
     margin: auto;
     -ms-flex-pack: center;
-        justify-content: center; }
+        justify-content: center;
+    -ms-flex-direction: column;
+        flex-direction: column; }
   .home .nav__item {
-    font-size: 3.375rem;
+    font-size: 2.25rem;
     font-weight: bold; }
   .home .logo {
     width: 100%;
-    height: 7.59375rem;
+    height: 3.375rem;
     margin-bottom: 2.25rem; }
+  @media screen and (min-width: 40em) {
+    .home .logo {
+      height: 7.59375rem; }
+    .home .nav {
+      -ms-flex-direction: row;
+          flex-direction: row; }
+    .home .nav__item {
+      font-size: 3.375rem; } }
 
 .portfolio {
   max-width: 100%;
@@ -4356,22 +4370,44 @@ ul.social-icons {
   -ms-flex-flow: nowrap column;
       flex-flow: nowrap column; }
   .portfolio-item__content {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-align: center;
-        align-items: center; }
-  .portfolio-item__image, .portfolio-item__image img {
-    height: 80%;
-    height: 80vh;
-    height: calc(100vh - 5rem);
+    display: block;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: stretch;
+        align-items: stretch;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    min-height: 80vh; }
+    @media screen and (min-width: 40em) {
+      .portfolio-item__content {
+        display: -ms-flexbox;
+        display: flex; } }
+  .portfolio-item__slider {
+    display: block;
+    -ms-flex: 1 0 0px;
+        flex: 1 0 0;
+    position: relative; }
+  .portfolio-item__slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 80vh; }
+  .portfolio-item__image {
+    display: block;
+    height: 100%;
+    min-height: 60vh;
+    max-height: none !important;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
     overflow: hidden; }
+  .portfolio-item .orbit-container {
+    height: auto !important;
+    min-height: 60vh; }
 
 .page--contact .hero-image {
   margin-bottom: 3.375rem; }
@@ -4405,7 +4441,7 @@ body {
       flex-direction: column; }
 
 main {
-  padding: 10rem 0 0 0;
+  padding: 6rem 0 0 0;
   -ms-flex-positive: 1;
       flex-grow: 1; }
   @media screen and (min-width: 40em) {
@@ -4419,11 +4455,11 @@ main {
   display: block; }
 
 .type-on-hover {
-  text-align: left;
+  text-align: center;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: start;
-      justify-content: flex-start; }
+  -ms-flex-pack: center;
+      justify-content: center; }
   .type-on-hover--left .type-on-hover__ellipsis, .type-on-hover--left .type-on-hover__text {
     direction: rtl; }
 
