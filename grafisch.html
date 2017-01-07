@@ -1,15 +1,27 @@
 
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="nl" prefix="og: http://ogp.me/ns#">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>KYMO ONE</title>
+        <title>Grafisch | KYMO ONE</title>
         <link rel="stylesheet" href="assets/css/app.css">
+
+        <!-- These values define how the website will appear when shared on Facebook -->
+        <meta property="og:title" content="KYMO ONE">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="http://kymoone.be">
+        <!-- TODO Update this. Should be an absolute URL. -->
+        <meta property="og:image" content="https://graph.facebook.com/v2.8/691677397559662/picture?type=large">
+        <meta property="og:description" content="Grafisch ontwerper met een passie voor vormgeving en kunst.">
+        <meta property="og:locale" content="nl_BE">
+        <meta property="og:video" content="https://www.facebook.com/KYMOOONE/videos/1253387631388633/">
+
     </head>
     <body class="page--grafisch">
 
+        
         <header>
             <nav class="nav">
                 <a href="grafisch.html" class="nav__col">
@@ -75,13 +87,15 @@
         
             <div class="portfolio">
         
-                  <article class="portfolio__item">
+                  <article class="portfolio__item" itemscope itemtype="http://schema.org/VisualArtwork">
+                      <link rel="author" href="contact.html" title="KYMO ONE">
                       <a href="portfolio/gouden-eeuw.html">
                           <div class="portfolio__item__preview">
                               <div class="portfolio__item__image" style="background-image: url(assets/img/gouden-eeuw/gouden-eeuw-1.jpg)"></div>
+                              <meta itemprop="image" content="assets/img/gouden-eeuw/gouden-eeuw-1.jpg">
                           </div>
                           <div class="portfolio__item__content">
-                              <h2>Gouden Eeuw</h2>
+                              <h2 itemprop="name">Gouden Eeuw</h2>
                           </div>
                       </a>
                   </article>
@@ -96,17 +110,17 @@
             <aside class="footer__left">
                 <ul class="social-icons">
                     <li>
-                        <a href="#">
+                        <a href="https://www.behance.net/kymo">
                             <img class="social-logo" alt="KYMO ONE on Behance" src="assets/img/social-logo--behance.png"/>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="https://www.facebook.com/KYMOOONE">
                             <img class="social-logo" alt="KYMO ONE on Facebook" src="assets/img/social-logo--facebook.png"/>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="https://instagram.com/kymo_one">
                             <img class="social-logo" alt="KYMO ONE on Instagram" src="assets/img/social-logo--instagram.png"/>
                         </a>
                     </li>

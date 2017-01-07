@@ -1,15 +1,27 @@
 
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="nl" prefix="og: http://ogp.me/ns#">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>KYMO ONE</title>
+        <title>Gouden Eeuw | KYMO ONE</title>
         <link rel="stylesheet" href="../assets/css/app.css">
+
+        <!-- These values define how the website will appear when shared on Facebook -->
+        <meta property="og:title" content="KYMO ONE">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="http://kymoone.be">
+        <!-- TODO Update this. Should be an absolute URL. -->
+        <meta property="og:image" content="https://graph.facebook.com/v2.8/691677397559662/picture?type=large">
+        <meta property="og:description" content="Grafisch ontwerper met een passie voor vormgeving en kunst.">
+        <meta property="og:locale" content="nl_BE">
+        <meta property="og:video" content="https://www.facebook.com/KYMOOONE/videos/1253387631388633/">
+
     </head>
     <body class="page--gouden-eeuw">
 
+        
         <header>
             <nav class="nav">
                 <a href="../grafisch.html" class="nav__col">
@@ -35,7 +47,7 @@
                 </a>
             </nav>
             
-            <a href="index.html" class="logo">
+            <a href="../index.html" class="logo">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <style>
                      .cls-1{fill:#eedb72;}
@@ -72,7 +84,11 @@
         
         
         
-        <main class="portfolio-item">
+        <main class="portfolio-item" itemscope itemtype="http://schema.org/VisualArtwork">
+        
+            <link rel="author" href="../contact.html" title="KYMO ONE">
+            <link itemprop="author" href="../contact.html" itemtype="http://schema.org/Person">
+            <meta itemprop="name" content="Gouden Eeuw">
         
             <div class="orbit portfolio-item__content" role="region" data-orbit
                  data-prev-class="nav-arrow--previous"
@@ -89,19 +105,23 @@
                 <ul class="orbit-container portfolio-item__image">
                     <li class="orbit-slide">
                         <img src="../assets/img/gouden-eeuw/gouden-eeuw-1.jpg"
-                             alt="Image for ">
+                             alt="Image for "
+                             itemprop="image">
                     </li>
                     <li class="orbit-slide">
                         <img src="../assets/img/gouden-eeuw/gouden-eeuw-2.jpg"
-                             alt="Image for ">
+                             alt="Image for "
+                             itemprop="image">
                     </li>
                     <li class="orbit-slide">
                         <img src="../assets/img/gouden-eeuw/gouden-eeuw-3.jpg"
-                             alt="Image for ">
+                             alt="Image for "
+                             itemprop="image">
                     </li>
                     <li class="orbit-slide">
                         <img src="../assets/img/gouden-eeuw/gouden-eeuw-4.jpg"
-                             alt="Image for ">
+                             alt="Image for "
+                             itemprop="image">
                     </li>
                 </ul>
                 <aside class="nav-arrow nav-arrow--next">
@@ -119,17 +139,17 @@
             <aside class="footer__left">
                 <ul class="social-icons">
                     <li>
-                        <a href="#">
+                        <a href="https://www.behance.net/kymo">
                             <img class="social-logo" alt="KYMO ONE on Behance" src="../assets/img/social-logo--behance.png"/>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="https://www.facebook.com/KYMOOONE">
                             <img class="social-logo" alt="KYMO ONE on Facebook" src="../assets/img/social-logo--facebook.png"/>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="https://instagram.com/kymo_one">
                             <img class="social-logo" alt="KYMO ONE on Instagram" src="../assets/img/social-logo--instagram.png"/>
                         </a>
                     </li>
