@@ -1,23 +1,41 @@
+---
+title: Contact
+---
+
 {{> header}}
 
-<main class="container">
+<main class="container" itemscope itemtype="http://schema.org/Person">
+
+    <meta itemprop="image" content="https://graph.facebook.com/v2.8/691677397559662/picture?type=large">
 
     <div class="row align-center">
-        <img class="medium-8 columns hero-image" src="//placekitten.com/960/300">
+        <img class="medium-8 columns hero-image" src="{{root}}assets/img/hero.jpg">
     </div>
 
     <div class="row align-center">
         <div class="medium-8 large-6 columns">
-            <h2>Matthias Michiels</h2>
-            <p>
-                <a href="mailto:herp@derp.com" class="underline">herp@derp.com</a><br>
-                +32 456 / 78 90 12
+            <h2>
+                <span itemprop="givenName">Matthias</span>
+                <span itemprop="familyName">Michiels</span>
+            </h2>
+            <p class="lead">
+                Grafisch ontwerper met een passie voor vormgeving en kunst.
             </p>
-            <p>
-                Straat 0 <br>
-                Stad <br>
-                Land
-            </p>
+            <div class="row contact-card">
+                <div class="medium-6 columns">
+                    <p>
+                        <a href="mailto:kymo.one@outlook.com" class="underline" itemprop="email">kymo.one@outlook.com</a><br>
+                        <span itemprop="telephone">+32 474 / 30 17 32</span>
+                    </p>
+                </div>
+                <div class="medium-6 columns">
+                    <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <span itemprop="streetAddress">Straat 0</span><br>
+                        <span itemprop="addressLocality">Zottegem</span><br>
+                        <span itemprop="addressCountry">België</span>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 

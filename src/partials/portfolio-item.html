@@ -1,7 +1,11 @@
 {{> header}}
 
 
-<main class="portfolio-item">
+<main class="portfolio-item" itemscope itemtype="http://schema.org/VisualArtwork">
+
+    <link rel="author" href="{{root}}contact.html" title="KYMO ONE">
+    <link itemprop="author" href="{{root}}contact.html" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="{{project.name}}">
 
     <div class="orbit portfolio-item__content" role="region" data-orbit
          data-prev-class="nav-arrow--previous"
@@ -19,7 +23,8 @@
             {{#each project.photos}}
             <li class="orbit-slide">
                 <img src="{{root}}../assets/img/{{../project.short_name}}/{{this}}"
-                     alt="Image for {{project.name}}">
+                     alt="Image for {{project.name}}"
+                     itemprop="image">
             </li>
             {{/each}}
         </ul>

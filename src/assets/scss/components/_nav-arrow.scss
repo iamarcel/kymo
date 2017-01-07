@@ -2,6 +2,7 @@
     align-self: stretch;
     width: 100%;
     height: ms(3);
+    position: relative;
 
     @include breakpoint(large) {
         width: ms(3);
@@ -14,6 +15,9 @@
     }
 
     & > a {
+        position: absolute;
+        left: 0;
+        top: 0;
         width: 100%;
         height: 100%;
 

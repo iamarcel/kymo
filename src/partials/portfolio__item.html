@@ -1,10 +1,12 @@
-<article class="portfolio__item">
+<article class="portfolio__item" itemscope itemtype="http://schema.org/VisualArtwork">
+    <link rel="author" href="{{root}}contact.html" title="KYMO ONE">
     <a href="{{root}}portfolio/{{short_name}}.html">
         <div class="portfolio__item__preview">
             <div class="portfolio__item__image" style="background-image: url(assets/img/{{short_name}}/{{thumbnail}})"></div>
+            <meta itemprop="image" content="{{root}}assets/img/{{short_name}}/{{thumbnail}}">
         </div>
         <div class="portfolio__item__content">
-            <h2>{{title}}</h2>
+            <h2 itemprop="name">{{title}}</h2>
         </div>
     </a>
 </article>
