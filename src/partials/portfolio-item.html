@@ -1,5 +1,6 @@
 {{> header}}
 
+<meta property="og:image" content="{{root}}../assets/img/{{project.short_name}}/{{project.thumbnail}}">
 
 <main class="portfolio-item" itemscope itemtype="http://schema.org/VisualArtwork">
 
@@ -19,12 +20,13 @@
                 <span>&bull;</span>
             </a>
         </aside>
-        <ul class="orbit-container portfolio-item__image">
+        <ul class="orbit-container portfolio-item__slider">
             {{#each project.photos}}
-            <li class="orbit-slide">
-                <img src="{{root}}../assets/img/{{../project.short_name}}/{{this}}"
-                     alt="Image for {{project.name}}"
-                     itemprop="image">
+            <li class="orbit-slide portfolio-item__slide">
+                <meta itemprop="image" content="{{root}}../assets/img/{{../project.short_name}}/{{this}}">
+                <div class="portfolio-item__image"
+                     style="background-image: url({{root}}../assets/img/{{../project.short_name}}/{{this}})">
+                </div>
             </li>
             {{/each}}
         </ul>

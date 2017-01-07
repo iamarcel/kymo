@@ -1,8 +1,12 @@
 header {
     @include flex-grid-row($width: 100%);
-    @include flex-align($x: justify, $y: top);
+    @include flex-align($x: center, $y: top);
 
-    height: 1.7 * $header-height;
+    @include breakpoint(medium) {
+        justify-content: flex-start;
+    }
+
+    height: 1.2 * $header-height;
     @include breakpoint(medium) {
         height: $header-height;
     }
@@ -13,7 +17,11 @@ header {
     width: 100%;
     z-index: 100;
 
-    padding: ms(1);
+    padding: ms(1)/2;
+    padding-bottom: 0;
+    @include breakpoint(medium) {
+        padding: ms(1);
+    }
 
     background: $body-background;
 

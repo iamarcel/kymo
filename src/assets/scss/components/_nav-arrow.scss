@@ -1,12 +1,13 @@
 .nav-arrow {
-    align-self: stretch;
+    align-self: center;
     width: 100%;
     height: ms(3);
     position: relative;
 
-    @include breakpoint(large) {
+    @include breakpoint(medium) {
         width: ms(3);
-        height: auto;
+        height: 100%;
+        min-height: 80vh;
     }
 
 

@@ -12,4 +12,8 @@
         @include flex-grid-column();
         flex: 0 1 auto;
     }
+
+    &__item {
+        justify-content: center;
+    }
 }

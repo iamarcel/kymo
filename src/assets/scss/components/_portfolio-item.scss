@@ -4,14 +4,47 @@
     flex-flow: nowrap column;
 
     &__content {
-        @include flex-grid-row($width: 100%, $behavior: collapse);
-        @include flex-align($x: spaced, $y: middle);
+        display: block;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        min-height: 80vh;
+
+        @include breakpoint(medium) {
+            display: flex;
+        }
     }
 
-    &__image, &__image img {
-        height: 80%;
-        height: 80vh;
-        height: calc(100vh - #{$header-height});
+    &__slider {
+        display: block;
+        flex: 1 0 0;
+        position: relative;
+    }
+
+    &__slide {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        min-height: 80vh;
+    }
+
+    &__image {
+        display: block;
+        height: 100%;
+        min-height: 60vh;
+        max-height: none !important;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
         overflow: hidden;
+    }
+
+    .orbit-container {
+        height: auto !important;
+        min-height: 60vh;
     }
 }

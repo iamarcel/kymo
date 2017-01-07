@@ -70,7 +70,7 @@ $(function () {
 
 
 
-    $(document).keypress(function (event) {
+    $(document).keyup(function (event) {
         var $carousel = $('#carousel');
         if (!$carousel.length) {
             return;

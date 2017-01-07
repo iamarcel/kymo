@@ -122,7 +122,7 @@ body {
 }
 
 main {
-    padding: 2*$header-height 0 0 0;
+    padding: 1.2*$header-height 0 0 0;
     flex-grow: 1;
 
     @include breakpoint(medium) {
@@ -139,9 +139,9 @@ main {
 }
 
 .type-on-hover {
-    text-align: left;
+    text-align: center;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 
     &--left {
         .type-on-hover__ellipsis, .type-on-hover__text {
