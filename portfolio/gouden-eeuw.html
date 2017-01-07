@@ -5,26 +5,36 @@
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#000000">
+
+        <link rel="icon" sizes="1024x1024" href="../assets/img/logo-square-1024.jpg">
+        <link rel="icon" sizes="196x196" href="../assets/img/logo-square-196.jpg">
+        <link rel="icon" sizes="32x32" href="../assets/img/logo-square-32.jpg">
+        <link rel="icon" sizes="16x16" href="../assets/img/logo-square-16.jpg">
+        <link rel="image_src" content="../assets/img/logo-square-1024.jpg">
+
         <link rel="stylesheet" href="../assets/css/app.css">
 
 
         <title>Gouden Eeuw | KYMO ONE</title>
         <meta name="title" content="Gouden Eeuw - KYMO ONE">
-        <meta property="og:title" content="Gouden Eeuw - KYMO ONE">
+        <meta property="og:title" content="Gouden Eeuw">
         <meta property="twitter:title" content="Gouden Eeuw - KYMO ONE">
+
         <meta name="author" content="Matthias Michiels">
         <meta name="description" content="Matthias Michiels, grafisch ontwerper met een passie voor vormgeving en kunst.">
         <meta name="keywords" content="grafisch ontwerp, grafisch ontwerper, kymo, kymo one, matthias michiels, graffiti, luca, luca school of arts">
-        <link rel="image_src" content="https://graph.facebook.com/v2.8/691677397559662/picture?type=large">
 
 
         <meta property="og:type" content="website">
         <meta property="og:url" content="http://kymoone.be">
         <meta property="twitter:domain:url" content="http://kymoone.be">
         <meta property="og:site_name" content="KYMO ONE">
-        <!-- TODO Update this. Should be an absolute URL. -->
-        <meta property="og:image" content="https://graph.facebook.com/v2.8/691677397559662/picture?type=large">
-        <meta property="twitter:image:src" content="https://graph.facebook.com/v2.8/691677397559662/picture?type=large">
+
+        <!-- This image will appear when being shared on social media -->
+        <meta property="og:image" content="../assets/img/sharing-image.jpg">
+        <meta property="twitter:image:src" content="../assets/img/sharing-image.jpg">
+
         <meta property="og:description" content="Grafisch ontwerper met een passie voor vormgeving en kunst.">
         <meta property="og:locale" content="nl_BE">
         <meta property="og:video" content="https://www.facebook.com/KYMOOONE/videos/1253387631388633/">
@@ -53,6 +63,26 @@
 
     </head>
     <body class="page--gouden-eeuw">
+
+        <script>
+         window.fbAsyncInit = function() {
+             FB.init({
+                 appId      : '691677397559662',
+                 xfbml      : true,
+                 version    : 'v2.8'
+             });
+             FB.AppEvents.logPageView();
+         };
+
+         (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+        </script>
+
 
         
         <header>
@@ -175,7 +205,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.facebook.com/KYMOOONE" target="_blank">
+                        <a href="https://www.facebook.com/KYMOOONE/" target="_blank">
                             <img class="social-logo" alt="KYMO ONE on Facebook" src="../assets/img/social-logo--facebook.png"/>
                         </a>
                     </li>
