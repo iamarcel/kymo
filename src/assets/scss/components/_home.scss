@@ -1,6 +1,8 @@
 .home {
     flex-grow: 1;
-    // min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     .nav {
         padding-bottom: ms(3);
