@@ -22,12 +22,10 @@
         </aside>
         <ul class="orbit-container portfolio-item__slider">
             {{#each project.photos}}
-            <li class="orbit-slide portfolio-item__slide">
-                <meta itemprop="image" content="{{root}}../assets/img/{{../project.short_name}}/{{this}}">
-                <div class="portfolio-item__image"
+                <div class="orbit-slide portfolio-item__image"
                      style="background-image: url({{root}}../assets/img/{{../project.short_name}}/{{this}})">
+                    <meta itemprop="image" content="{{root}}../assets/img/{{../project.short_name}}/{{this}}">
                 </div>
-            </li>
             {{/each}}
         </ul>
         <aside class="nav-arrow nav-arrow--next">
