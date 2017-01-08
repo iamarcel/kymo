@@ -1,19 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="nl" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# profile: http://ogp.me/ns/profile#">
     <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="theme-color" content="#000000">
-
-        <link rel="icon" sizes="1024x1024" href="{{root}}assets/img/logo-square-1024.jpg">
-        <link rel="icon" sizes="196x196" href="{{root}}assets/img/logo-square-196.jpg">
-        <link rel="icon" sizes="32x32" href="{{root}}assets/img/logo-square-32.jpg">
-        <link rel="icon" sizes="16x16" href="{{root}}assets/img/logo-square-16.jpg">
-        <link rel="image_src" content="{{root}}assets/img/logo-square-1024.jpg">
-
-        <link rel="stylesheet" href="{{root}}assets/css/app.css">
-
+        {{> head-common}}
 
         <title>{{project.name}} | KYMO ONE</title>
         <meta name="title" content="{{project.name}} - KYMO ONE">
@@ -32,21 +20,12 @@
 
         <!-- This image will appear when being shared on social media -->
         {{#if project.thumbnail}}
-        <meta property="og:image" content="{{project.thumbnail}}">
-        <meta name="twitter:image:src" content="{{project.thumbnail}}">
+        <meta property="og:image" content="{{website_root}}assets/img/{{project.short_name}}/{{project.thumbnail}}">
+        <meta name="twitter:image:src" content="{{website_root}}assets/img/{{project.short_name}}/{{project.thumbnail}}">
         {{else}}
-        <meta property="og:image" content="https://iamarcel.github.io/kymo/assets/img/sharing-image.jpg">
-        <meta name="twitter:image:src" content="https://iamarcel.github.io/kymo/assets/img/sharing-image.jpg">
+        <meta property="og:image" content="{{website_root}}assets/img/sharing-image.jpg">
+        <meta name="twitter:image:src" content="{{website_root}}assets/img/sharing-image.jpg">
         {{/if}}
-
-        <meta property="og:type" content="website">
-        <!-- <meta property="og:url" content="http://kymoone.be">
-             <meta name="twitter:domain:url" content="http://kymoone.be"> -->
-        <meta property="og:site_name" content="KYMO ONE">
-
-        <meta property="og:locale" content="nl_BE">
-        <meta property="fb:app_id" content="691677397559662">
-        <meta name="twitter:card" content="photo">
 
     </head>
     <body class="page--{{page}}">
