@@ -20,11 +20,11 @@
 
         <!-- This image will appear when being shared on social media -->
         {{#if project.thumbnail}}
-        <meta property="og:image" content="{{website_root}}assets/img/{{project.short_name}}/{{project.thumbnail}}">
-        <meta name="twitter:image:src" content="{{website_root}}assets/img/{{project.short_name}}/{{project.thumbnail}}">
+        <meta property="og:image" content="{{general.website_root}}assets/img/{{project.short_name}}/{{project.thumbnail}}">
+        <meta name="twitter:image:src" content="{{general.website_root}}assets/img/{{project.short_name}}/{{project.thumbnail}}">
         {{else}}
-        <meta property="og:image" content="{{website_root}}assets/img/sharing-image.jpg">
-        <meta name="twitter:image:src" content="{{website_root}}assets/img/sharing-image.jpg">
+        <meta property="og:image" content="{{general.website_root}}assets/img/sharing-image.jpg">
+        <meta name="twitter:image:src" content="{{general.website_root}}assets/img/sharing-image.jpg">
         {{/if}}
 
     </head>
