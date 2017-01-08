@@ -4406,6 +4406,9 @@ ul.social-icons {
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
+    position: absolute !important;
+    left: 0;
+    top: 0;
     overflow: hidden; }
   .portfolio-item .orbit-container {
     height: auto !important; }
