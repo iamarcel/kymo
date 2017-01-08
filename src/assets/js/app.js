@@ -57,11 +57,6 @@ $(function () {
         $('footer').toggleClass('border', !isScrolledToBottom());
     };
 
-    $(document).on('scroll', function () {
-        // toggleBorders();
-        // $('header').css('border-width', window.scrollY / 20);
-    });
-
     $(window).on('resize', calculateHoverTextWidths);
 
     toggleBorders();
@@ -77,9 +72,17 @@ $(function () {
         }
 
         if (event.keyCode === 37) {
+            // Left arrow
             $carousel.foundation('changeSlide', false);
         } else if (event.keyCode === 39) {
+            // Right arrow
             $carousel.foundation('changeSlide', true);
+        } else if (event.keyCode === 38) {
+            // Up arrow
+            window.location.href = PREVIOUS_PORTFOLIO_ITEM_URL;
+        } else if (event.keyCode === 40) {
+            // Down arrow
+            window.location.href = NEXT_PORTFOLIO_ITEM_URL;
         }
     });
 

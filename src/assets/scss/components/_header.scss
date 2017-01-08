@@ -2,9 +2,7 @@ header {
     @include flex-grid-row($width: 100%);
     @include flex-align($x: center, $y: top);
 
-    @include breakpoint(medium) {
-        justify-content: space-between;
-    }
+    justify-content: space-between;
 
     height: 1.2 * $header-height;
     @include breakpoint(medium) {

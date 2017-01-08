@@ -18,6 +18,10 @@
     padding-left: ms(1);
     padding-right: ms(1);
 
+    @include breakpoint(medium) {
+        height: $footer-height-medium;
+    }
+
     // &.border {
     //     border-top-width: $global-border-width;
     // }

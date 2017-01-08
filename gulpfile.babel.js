@@ -53,7 +53,10 @@ function pages() {
       layouts: 'src/layouts/',
       partials: 'src/partials/',
       data: 'src/data/',
-      helpers: 'src/helpers/'
+      helpers: 'src/helpers/',
+      pageLayouts: {
+          'portfolio': 'empty'
+      }
     }))
     .pipe(gulp.dest(PATHS.dist));
 }

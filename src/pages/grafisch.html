@@ -1,15 +1,16 @@
 ---
 title: Grafisch
+category_suffix: fisch
 ---
 
-{{> header categorySuffix="fisch"}}
+{{> header}}
 
 <main class="container">
 
     <div class="portfolio">
 
         {{#each portfolio.grafisch}}
-          {{> portfolio__item short_name=this.short_name item=this.thumbnail title=this.name}}
+          {{> portfolio__item project=this}}
         {{/each}}
 
     </div>

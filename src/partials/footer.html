@@ -1,0 +1,34 @@
+<footer class="footer">
+    <aside class="footer__left">
+        <ul class="social-icons">
+            <li>
+                <a href="https://www.behance.net/kymo" target="_blank">
+                    <img class="social-logo" alt="KYMO ONE on Behance" src="{{root}}assets/img/social-logo--behance.png"/>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/KYMOOONE/" target="_blank">
+                    <img class="social-logo" alt="KYMO ONE on Facebook" src="{{root}}assets/img/social-logo--facebook.png"/>
+                </a>
+            </li>
+            <li>
+                <a href="https://instagram.com/kymo_one" target="_blank">
+                    <img class="social-logo" alt="KYMO ONE on Instagram" src="{{root}}assets/img/social-logo--instagram.png"/>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    {{#if project}}
+    <div class="text-center">
+        {{project.name}}<br>
+        <a class="next-project-link" href="{{root}}portfolio/{{project.next}}.html">
+            <img alt="Next" src="{{root}}assets/img/arrow-down.svg">
+        </a>
+    </div>
+    {{/if}}
+    <aside class="footer__right">
+        <a href="{{root}}contact.html">Contact</a>
+    </aside>
+</footer>
+
+<script src="{{root}}assets/js/app.js"></script>

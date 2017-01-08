@@ -167,3 +167,16 @@ main {
     font-size: 150%;
     line-height: 1.2em;
 }
+
+.next-project-link {
+    display: block;
+    width: 100%;
+
+    &:hover {
+        background: rgba(255,255,255,.1);
+    }
+
+    img {
+        height: .75em;
+    }
+}

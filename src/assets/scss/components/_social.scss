@@ -9,8 +9,13 @@ ul.social-icons {
 
     li {
         @include flex-grid-column($columns: shrink, $gutter: 0);
-        padding-left: ms(1)/2;
-        padding-right: ms(1)/2;
+        padding-left: ms(1)/4;
+        padding-right: ms(1)/4;
+
+        @include breakpoint(medium) {
+            padding-left: ms(1)/2;
+            padding-right: ms(1)/2;
+        }
 
         &:first-child {
             padding-left: 0;

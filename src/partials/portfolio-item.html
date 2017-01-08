@@ -1,38 +1,96 @@
-{{> header categorySuffix=categorySuffix}}
+<!doctype html>
+<html class="no-js" lang="nl" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# profile: http://ogp.me/ns/profile#">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#000000">
 
-<meta property="og:image" content="{{root}}../assets/img/{{project.short_name}}/{{project.thumbnail}}">
+        <link rel="icon" sizes="1024x1024" href="{{root}}assets/img/logo-square-1024.jpg">
+        <link rel="icon" sizes="196x196" href="{{root}}assets/img/logo-square-196.jpg">
+        <link rel="icon" sizes="32x32" href="{{root}}assets/img/logo-square-32.jpg">
+        <link rel="icon" sizes="16x16" href="{{root}}assets/img/logo-square-16.jpg">
+        <link rel="image_src" content="{{root}}assets/img/logo-square-1024.jpg">
 
-<main class="portfolio-item" itemscope itemtype="http://schema.org/VisualArtwork">
+        <link rel="stylesheet" href="{{root}}assets/css/app.css">
 
-    <link rel="author" href="{{root}}contact.html" title="KYMO ONE">
-    <link itemprop="author" href="{{root}}contact.html" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="{{project.name}}">
 
-    <div class="orbit portfolio-item__content" role="region" data-orbit
-         data-prev-class="nav-arrow--previous"
-         data-next-class="nav-arrow--next"
-         data-use-m-u-i="false"
-         id="carousel"
-         data-accessible="false"
-         aria-label="Photos for {{project.name}}">
-        <aside class="nav-arrow nav-arrow--previous">
-            <a href="#" class="nav-arrow__icon">
-                <span>&bull;</span>
-            </a>
-        </aside>
-        <ul class="orbit-container portfolio-item__slider">
-            {{#each project.photos}}
+        <title>{{project.name}} | KYMO ONE</title>
+        <meta name="title" content="{{project.name}} - KYMO ONE">
+        <meta property="og:title" content="{{project.name}}">
+        <meta name="twitter:title" content="{{project.name}} - KYMO ONE">
+
+        <meta name="author" content="Matthias Michiels">
+        {{#if project.description}}
+        <meta name="description" content="{{project.description}}">
+        <meta property="og:description" content="{{project.description}}">
+        {{else}}
+        <meta name="description" content="{{project.name}}, een project van KYMO ONE">
+        <meta property="og:description" content="{{project.name}}, een project van KYMO ONE">
+        {{/if}}
+        <meta name="keywords" content="grafisch ontwerp, grafisch ontwerper, kymo, kymo one, matthias michiels, graffiti, luca, luca school of arts">
+
+        <!-- This image will appear when being shared on social media -->
+        {{#if project.thumbnail}}
+        <meta property="og:image" content="{{project.thumbnail}}">
+        <meta name="twitter:image:src" content="{{project.thumbnail}}">
+        {{else}}
+        <meta property="og:image" content="https://iamarcel.github.io/kymo/assets/img/sharing-image.jpg">
+        <meta name="twitter:image:src" content="https://iamarcel.github.io/kymo/assets/img/sharing-image.jpg">
+        {{/if}}
+
+        <meta property="og:type" content="website">
+        <!-- <meta property="og:url" content="http://kymoone.be">
+             <meta name="twitter:domain:url" content="http://kymoone.be"> -->
+        <meta property="og:site_name" content="KYMO ONE">
+
+        <meta property="og:locale" content="nl_BE">
+        <meta property="fb:app_id" content="691677397559662">
+        <meta name="twitter:card" content="photo">
+
+    </head>
+    <body class="page--{{page}}">
+        {{> body-top}}
+        {{> header}}
+
+        <meta property="og:image" content="{{root}}../assets/img/{{project.short_name}}/{{project.thumbnail}}">
+        <script type="text/javascript">
+         var NEXT_PORTFOLIO_ITEM_URL = '{{root}}portfolio/{{project.next}}.html';
+         var PREVIOUS_PORTFOLIO_ITEM_URL = '{{root}}portfolio/{{project.previous}}.html';
+        </script>
+
+        <main class="orbit portfolio-item portfolio-item__content" role="region" data-orbit
+              data-prev-class="nav-arrow--previous"
+              data-next-class="nav-arrow--next"
+              data-use-m-u-i="true"
+              id="carousel"
+              data-accessible="true"
+              aria-label="Photos for {{project.name}}"
+              data-options="animation_speed: 5000;"
+              itemscope itemtype="http://schema.org/VisualArtwork">
+
+            <link rel="author" href="{{root}}contact.html" title="KYMO ONE">
+            <link itemprop="author" href="{{root}}contact.html" itemtype="http://schema.org/Person">
+            <meta itemprop="name" content="{{project.name}}">
+            <aside class="nav-arrow nav-arrow--previous">
+                <a href="#" class="nav-arrow__icon">
+                    <span>&bull;</span>
+                </a>
+            </aside>
+            <ul class="orbit-container portfolio-item__slider">
+                {{#each project.photos}}
                 <div class="orbit-slide portfolio-item__image"
                      style="background-image: url({{root}}../assets/img/{{../project.short_name}}/{{this}})">
                     <meta itemprop="image" content="{{root}}../assets/img/{{../project.short_name}}/{{this}}">
                 </div>
-            {{/each}}
-        </ul>
-        <aside class="nav-arrow nav-arrow--next">
-            <a href="#" class="nav-arrow__icon">
-                <span>&bull;</span>
-            </a>
-        </aside>
-    </div>
-
-</main>
+                {{/each}}
+            </ul>
+            <aside class="nav-arrow nav-arrow--next">
+                <a href="#" class="nav-arrow__icon">
+                    <span>&bull;</span>
+                </a>
+            </aside>
+        </main>
+        {{> footer}}
+    </body>
+</html>

@@ -9,6 +9,8 @@ graffiti:
       - anonymous-skull-2.jpg
       - anonymous-skull-3.jpg
       - anonymous-skull-4.jpg
+    previous: gouden-eeuw
+    next: gouden-eeuw
 
 
 grafisch:
@@ -22,6 +24,8 @@ grafisch:
       - gouden-eeuw-2.jpg
       - gouden-eeuw-3.jpg
       - gouden-eeuw-4.jpg
+    previous: anonymous-skull
+    next: anonymous-skull
 
 
 graag:
