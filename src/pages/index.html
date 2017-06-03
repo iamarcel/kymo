@@ -40,5 +40,22 @@
         </div>
 
         {{> nav}}
+
+        <div class="portfolio">
+
+            {{#each portfolio.graag}}
+                {{> portfolio__item project=this}}
+            {{/each}}
+
+            {{#each portfolio.graffiti}}
+                {{> portfolio__item project=this}}
+            {{/each}}
+
+            {{#each portfolio.grafisch}}
+                {{> portfolio__item project=this}}
+            {{/each}}
+
+        </div>
+
     </div>
 </main>
