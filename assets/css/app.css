@@ -4255,7 +4255,7 @@ ul.social-icons {
     .home {
       padding-top: 3.375rem; }
       .home .logo {
-        height: 7.59375rem;
+        height: 5.0625rem;
         margin-top: 1.5rem; }
       .home .nav {
         -ms-flex-direction: row;
@@ -4299,8 +4299,8 @@ ul.social-icons {
   .portfolio__item {
     -ms-flex: 1 1 0px;
         flex: 1 1 0px;
-    padding-left: 1.125rem;
-    padding-right: 1.125rem;
+    padding-left: 2.53125rem;
+    padding-right: 2.53125rem;
     min-width: initial; }
     @media screen and (min-width: 40em) {
       .portfolio__item {
@@ -4310,6 +4310,13 @@ ul.social-icons {
         padding-right: 2.53125rem;
         min-width: initial; } }
     @media screen and (min-width: 64em) {
+      .portfolio__item {
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0px;
+        padding-left: 3.79688rem;
+        padding-right: 3.79688rem;
+        min-width: initial; } }
+    @media screen and (min-width: 90em) {
       .portfolio__item {
         -ms-flex: 1 1 0px;
             flex: 1 1 0px;
