@@ -43,13 +43,18 @@
 
 
     &__item {
-        @include flex-grid-column($gutter: ms(2));
+        @include flex-grid-column($gutter: ms(4));
         $pad: ms(2);
+
         @include breakpoint(medium) {
             @include flex-grid-column($gutter: ms(4));
             $pad: ms(2);
         }
         @include breakpoint(large) {
+            @include flex-grid-column($gutter: ms(5));
+            $pad: ms(4);
+        }
+        @include breakpoint(xxlarge) {
             @include flex-grid-column($gutter: ms(6));
             $pad: ms(5);
         }
