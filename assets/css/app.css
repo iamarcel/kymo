@@ -4199,8 +4199,17 @@ ul.social-icons {
         padding-left: 1.6875rem;
         padding-right: 1.6875rem; } }
   .nav__item {
+    display: inline-block;
     -ms-flex-pack: center;
-        justify-content: center; }
+        justify-content: center;
+    transform: perspective(100vh);
+    transition: transform .2s ease-out, color .2s ease-out; }
+    .nav__item:hover {
+      transform: perspective(100vh) translate3d(0, -1px, 10px);
+      color: #fbf3cb; }
+    .nav__item:active {
+      transition: transform .1s ease-out;
+      transform: perspective(100vh) translate3d(0, -1px, -5px); }
 
 .nav-arrow {
   -ms-flex-item-align: center;
@@ -4301,7 +4310,9 @@ ul.social-icons {
         flex: 1 1 0px;
     padding-left: 2.53125rem;
     padding-right: 2.53125rem;
-    min-width: initial; }
+    min-width: initial;
+    transform: perspective(100vh);
+    transition: transform .2s ease-out; }
     @media screen and (min-width: 40em) {
       .portfolio__item {
         -ms-flex: 1 1 0px;
@@ -4323,6 +4334,11 @@ ul.social-icons {
         padding-left: 5.69531rem;
         padding-right: 5.69531rem;
         min-width: initial; } }
+    .portfolio__item:hover {
+      transform: perspective(100vh) translate3d(0, -3px, 10px); }
+    .portfolio__item:active {
+      transition: transform .1s ease-out;
+      transform: perspective(100vh) translate3d(0, -3px, -5px); }
     .portfolio__item > * {
       display: block;
       position: relative; }
@@ -4364,7 +4380,7 @@ ul.social-icons {
       background: rgba(255, 255, 255, 0.5);
       color: #000;
       text-align: center;
-      transition: opacity 0.4s ease-out; }
+      transition: opacity 0.4s ease-out, transform .1s ease-out; }
       .portfolio__item__content h2 {
         position: relative; }
         .portfolio__item__content h2::after {
