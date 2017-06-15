@@ -16,6 +16,7 @@
     &__item {
         display: inline-block;
         justify-content: center;
+        text-align: center;
 
         transform: perspective(100vh);
         transition: transform .2s ease-out, color .2s ease-out;
