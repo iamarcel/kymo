@@ -4202,6 +4202,7 @@ ul.social-icons {
     display: inline-block;
     -ms-flex-pack: center;
         justify-content: center;
+    text-align: center;
     transform: perspective(100vh);
     transition: transform .2s ease-out, color .2s ease-out; }
     .nav__item:hover {
