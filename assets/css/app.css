@@ -4185,7 +4185,8 @@ ul.social-icons {
   font-weight: bold;
   margin: 0; }
   .nav a {
-    color: #f3dd6d; }
+    color: #f3dd6d;
+    text-align: center; }
   .nav__col {
     -ms-flex: 1 1 0px;
         flex: 1 1 0px;
