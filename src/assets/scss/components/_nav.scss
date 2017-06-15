@@ -1,17 +1,18 @@
 .nav {
     @include flex-grid-row;
+    justify-content: space-around;
     font-weight: bold;
 
     margin: 0;
 
     a {
         color: $body-font-color;
-        text-align: center;
     }
 
     &__col {
         @include flex-grid-column();
         flex: 0 1 auto;
+        text-align: center;
     }
 
     &__item {

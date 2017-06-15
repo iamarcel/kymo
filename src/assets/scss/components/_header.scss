@@ -1,7 +1,6 @@
 header {
     @include flex-grid-row($width: 100%);
     @include flex-align($x: center, $y: top);
-
     justify-content: space-between;
 
     height: 1.2 * $header-height;
@@ -51,7 +50,18 @@ header {
         }
     }
 
+    .nav {
+        width: 100%;
+        @include breakpoint(medium) {
+            width: auto;
+        }
+    }
+
     .nav__col:first-child {
         padding-left: 0;
+    }
+
+    .nav__col:last-child {
+        padding-right: 0;
     }
 }
