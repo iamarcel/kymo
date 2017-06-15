@@ -4118,8 +4118,15 @@ header {
     header .logo > svg {
       height: 1.5rem;
       width: 100%; }
+  header .nav {
+    width: 100%; }
+    @media screen and (min-width: 40em) {
+      header .nav {
+        width: auto; } }
   header .nav__col:first-child {
     padding-left: 0; }
+  header .nav__col:last-child {
+    padding-right: 0; }
 
 .social-logo {
   height: 1em; }
@@ -4182,11 +4189,12 @@ ul.social-icons {
   display: flex;
   -ms-flex-flow: row wrap;
       flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   font-weight: bold;
   margin: 0; }
   .nav a {
-    color: #f3dd6d;
-    text-align: center; }
+    color: #f3dd6d; }
   .nav__col {
     -ms-flex: 1 1 0px;
         flex: 1 1 0px;
@@ -4194,7 +4202,8 @@ ul.social-icons {
     padding-right: 1.125rem;
     min-width: initial;
     -ms-flex: 0 1 auto;
-        flex: 0 1 auto; }
+        flex: 0 1 auto;
+    text-align: center; }
     @media screen and (min-width: 40em) {
       .nav__col {
         padding-left: 1.6875rem;
@@ -4510,3 +4519,9 @@ main {
     background: rgba(255, 255, 255, 0.1); }
   .next-project-link img {
     height: .75em; }
+
+.category-name {
+  display: none; }
+  @media screen and (min-width: 40em) {
+    .category-name {
+      display: block; } }
