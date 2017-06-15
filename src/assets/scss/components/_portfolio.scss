@@ -59,6 +59,18 @@
             $pad: ms(5);
         }
 
+        transform: perspective(100vh);
+        transition: transform .2s ease-out;
+
+        &:hover {
+            transform: perspective(100vh) translate3d(0, -3px, 10px);
+        }
+
+        &:active {
+            transition: transform .1s ease-out;
+            transform: perspective(100vh) translate3d(0, -3px, -5px);
+        }
+
         & > * {
             display: block;
             position: relative;
@@ -102,7 +114,7 @@
 
             text-align: center;
 
-            transition: opacity 0.4s ease-out;
+            transition: opacity 0.4s ease-out, transform .1s ease-out;
 
             h2 {
                 position: relative;
