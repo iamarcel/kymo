@@ -2,7 +2,7 @@
     <link rel="author" href="{{root}}contact.html" title="KYMO ONE">
     {{#each project.photos}}
         {{#if @first}}
-            <a href="{{root}}../assets/img/{{../project.short_name}}/{{this}}">
+            <a href="{{root}}assets/img/{{../project.short_name}}/{{this}}">
                 <div class="portfolio__item__preview">
                     <div class="portfolio__item__image" style="background-image: url(assets/img/{{../project.short_name}}/{{../project.thumbnail}})"></div>
                     <meta itemprop="image" content="{{root}}assets/img/{{../project.short_name}}/{{../project.thumbnail}}">
@@ -12,7 +12,7 @@
                 </div>
             </a>
         {{else}}
-            <a href="{{root}}../assets/img/{{../project.short_name}}/{{this}}" style="display: none"></a>
+            <a href="{{root}}assets/img/{{../project.short_name}}/{{this}}" style="display: none"></a>
         {{/if}}
     {{/each}}
 </article>
