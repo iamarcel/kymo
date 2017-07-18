@@ -24,18 +24,9 @@ header {
 
         padding: ms(2);
 
-        .logo {
-            height: ms(4);
-            margin-top: 0;
-        }
-
         .nav {
             padding-bottom: ms(3);
             flex-grow: 1;
-
-            &__item {
-                font-size: ms(2);
-            }
 
             &__col {
                 padding: 0;
@@ -45,6 +36,15 @@ header {
 
     @include breakpoint(large) {
         padding: ms(3);
+
+        .logo {
+            height: ms(4);
+            margin-top: 0;
+        }
+
+        .nav__item {
+            font-size: ms(2);
+        }
     }
 
     @include breakpoint(xxlarge) {
