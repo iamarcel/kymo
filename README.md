@@ -1,8 +1,19 @@
 # KYMO ONE Website
 
-## Nieuw portfolio-item toevoegen
+## Algemene info
+Er is een soort mini-database in `src/data`. Deze bestanden vind je daar:
 
-### Nieuwe entry
+- `general.yml`: algemene info zoals de naam van de site, je contactgegevens etc.
+- `categories.yml`: de categorieën (nu grafisch, murals en vrij werk)
+- `portfolio.yml`: de items van je portfolio
+
+De belangrijkste regels van de syntax:
+- Zorg dat de indenting juist is; als je een onderverdeling maakt voeg je
+  telkens 2 spaties toe in het begin van de lijn
+- Het stukje voor de dubbelpunt in elke lijn is de sleutelwaarde. Die moet uniek
+  zijn voor dat niveau
+
+## Nieuw portfolio-item toevoegen
 
 Open `src/data/portfolio.yml` en voeg een nieuwe entry toe, bijvoorbeeld
 
@@ -10,6 +21,7 @@ Open `src/data/portfolio.yml` en voeg een nieuwe entry toe, bijvoorbeeld
 anonymous_skull:
   name: Anonymous Skull
   short_name: anonymous-skull
+  category: murals
   thumbnail: anonymous-skull-1.jpg
   photos:
     - anonymous-skull-1.jpg
@@ -18,22 +30,14 @@ anonymous_skull:
     - anonymous-skull-4.jpg
 ```
 
-### De pagina
+De elementen hier zijn:
 
-Maak een nieuw bestand `src/pages/portfolio/{{short_name}}.html` aan (vervang
-`{{short_name}}` door wat je daar net hebt ingevuld). De inhoud van dat bestand
-is:
-
-```html
-{{> portfolio-item project=portfolio.{{soort}}.{{@key}}}}
-```
-
-met `{{soort}}` één van 'graffiti', 'grafisch' of 'graag' en `{{@key}}` wat er
-voor de eerste dubbelpunt staat, hier `anonymous_skull`. (Daar mag geen minteken
-instaan, bijvoorbeeld. Best gewoon kleine letters en underscores---er is toch
-niemand die het ooit zal zien. Bij de `short_name` heb je meer vrijheid.)
-
-### Afbeeldingen
+- `name`: de naam die verschijnt als je met je muis over jet item gaat
+- `short_name`: de naam die gebruikt wordt in URL's (onder andere de naam van de
+  map met foto's van dit project)
+- `category`: de sleutelwaarde van de categorie van dit project (zie `categories.yml`)
+- `thumbnail`: de bestandsnaam van de foto die als thumbnail moet worden gebruikt
+- `photos`: een lijst met bestandsnamen van alle foto's van dit project
 
 Plaats de afbeeldingen als `src/assets/img/{{short_name}}/{{photo}}`, waarbij
 `{{photo}}` een waarde voorstelt die je bij `thumbnail` of `photos` hebt ingevuld.
@@ -42,6 +46,9 @@ Plaats de afbeeldingen als `src/assets/img/{{short_name}}/{{photo}}`, waarbij
 
 ## De site bouwen
 
+De site wordt op je computer gegenereerd. Daarna heb je een mapje dat je gewoon
+naar je webserver kan kopiëren.
+
 ### Installatie
 Nodig: node.js.
 
@@ -49,11 +56,13 @@ Dit hoef je maar één keer te doen. Open je terminal en ga naar deze map. Voer 
 volgende commando's uit.
 
 ```sh
-npm i -g foundation-cli
-npm i
+npm install --global foundation-cli
+npm install
+bower install
 ```
 
 ### Bekijken
+
 ```sh
 npm start
 ```
@@ -63,8 +72,12 @@ de `yml`-bestanden worden niet opgepikt, daarvoor zal je moeten stoppen (Ctrl+C)
 en opnieuw het commando uitvoeren.
 
 ### Bouwen om te uploaden
+
 ```sh
 npm run build
 ```
 
 Als dat klaar is, gewoon de `dist/`-map ergens naar uploaden.
+
+**Vergeet niet** de waarde `website_root` in `general.yml` te veranderen! Anders
+gaan er links kapot. Laat een `/` aan het einde staan.
