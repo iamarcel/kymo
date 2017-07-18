@@ -1,1 +1,19 @@
 website_root: https://iamarcel.github.io/kymo/
+
+name: KYMO ONE
+description: Grafisch ontwerper met een passie voor vormgeving en kunst.
+keywords: grafisch ontwerp, grafisch ontwerper, kymo, kymo one, matthias michiels, graffiti, luca, luca school of art
+
+personal:
+  telephone: +32 474 / 30 17 32
+  email: kymo.one@outlook.com
+  first_name: Matthias
+  last_name: Michiels
+
+social:
+  facebook_url: https://www.facebook.com/KYMOOONE
+  behance_url: https://www.behance.net/kymo
+  instagram_url: https://instagram.com/kymo_one
+
+  show_video_when_sharing_on_facebook: false
+  facebook_video_url: https://www.facebook.com/KYMOOONE/videos/1253387631388633/

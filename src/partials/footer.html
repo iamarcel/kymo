@@ -1,32 +1,25 @@
 <footer class="footer">
-    <aside class="footer__left">
+    <aside>
+        <a href="{{root}}contact.html" class="baguette info-link">Info & Contact</a>
+    </aside>
+    <aside>
         <ul class="social-icons">
             <li>
-                <a href="https://www.behance.net/kymo" target="_blank">
+                <a href="{{general.social.behance_url}}" target="_blank">
                     <img class="social-logo" alt="KYMO ONE on Behance" src="{{root}}assets/img/social-logo--behance.png"/>
                 </a>
             </li>
             <li>
-                <a href="https://www.facebook.com/KYMOOONE/" target="_blank">
+                <a href="{{general.social.facebook_url}}" target="_blank">
                     <img class="social-logo" alt="KYMO ONE on Facebook" src="{{root}}assets/img/social-logo--facebook.png"/>
                 </a>
             </li>
             <li>
-                <a href="https://instagram.com/kymo_one" target="_blank">
+                <a href="{{general.social.instagram_url}}" target="_blank">
                     <img class="social-logo" alt="KYMO ONE on Instagram" src="{{root}}assets/img/social-logo--instagram.png"/>
                 </a>
             </li>
         </ul>
-    </aside>
-    {{#if project}}
-    <div class="text-center">
-        <a class="next-project-link" href="{{root}}portfolio/{{project.next}}.html">
-            <img alt="Next" src="{{root}}assets/img/arrow-down.svg">
-        </a>
-    </div>
-    {{/if}}
-    <aside class="footer__right">
-        <a href="{{root}}contact.html">Contact</a>
     </aside>
 </footer>
 

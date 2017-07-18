@@ -1,36 +1,9 @@
 .footer {
-    @include flex-grid-row($width: 100%, $behavior: collapse);
-    @include flex-align($y: middle);
-
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: $footer-height;
-    z-index: 100;
-
-    background: $body-background;
-
-    // transition: border-width 0.1s ease-in-out;
-    // border-top: $global-border-style;
-    // border-top-width: 0;
-
-    padding-left: ms(1);
-    padding-right: ms(1);
-
-    @include breakpoint(medium) {
-        height: $footer-height-medium;
-    }
-
-    // &.border {
-    //     border-top-width: $global-border-width;
-    // }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
     & > aside {
         @include flex-grid-column($gutter: 0);
-    }
-
-    &__right {
-        text-align: right;
     }
 }

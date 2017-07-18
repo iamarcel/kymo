@@ -3,21 +3,42 @@
 <!doctype html>
 <html class="no-js" lang="nl" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# profile: http://ogp.me/ns/profile#">
     <head>
-        {{> head-common}}
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#000000">
+
+        <link rel="icon" sizes="1024x1024" href="{{root}}assets/img/logo-square-1024.jpg">
+        <link rel="icon" sizes="196x196" href="{{root}}assets/img/logo-square-196.jpg">
+        <link rel="icon" sizes="32x32" href="{{root}}assets/img/logo-square-32.jpg">
+        <link rel="icon" sizes="16x16" href="{{root}}assets/img/logo-square-16.jpg">
+        <link rel="image_src" content="{{root}}assets/img/logo-square-1024.jpg">
+
+        <link rel="stylesheet" href="{{root}}assets/css/app.css">
+
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="KYMO ONE">
+
+        <meta name="author" content="{{general.personal.first_name}} {{general.personal.last_name}}">
+        <meta name="description" content="{{general.description}}">
+        <meta name="keywords" content="{{general.keywords}}">
+        <meta property="og:locale" content="nl_BE">
+        <meta property="fb:app_id" content="1847488748868897">
+        <meta name="twitter:card" content="photo">
 
         {{#if title}}
         <title>{{title}} | KYMO ONE</title>
-        <meta name="title" content="{{title}} - KYMO ONE">
+        <meta name="title" content="{{title}} - {{general.name}}">
         <meta property="og:title" content="{{title}}">
-        <meta name="twitter:title" content="{{title}} - KYMO ONE">
+        <meta name="twitter:title" content="{{title}} - {{general.name}}">
         {{else}}
         <title>KYMO ONE</title>
-        <meta name="title" content="KYMO ONE">
-        <meta property="og:title" content="KYMO ONE">
-        <meta name="twitter:title" content="KYMO ONE">
+        <meta name="title" content="{{general.name}}">
+        <meta property="og:title" content="{{general.name}}">
+        <meta name="twitter:title" content="{{general.name}}">
         {{/if}}
 
-        <meta name="description" content="Matthias Michiels, grafisch ontwerper met een passie voor vormgeving en kunst.">
+        <meta name="description" content="{{general.description}}">
 
         <!-- This image will appear when being shared on social media -->
         {{#if image}}
@@ -28,28 +49,36 @@
         <meta name="twitter:image:src" content="{{general.website_root}}assets/img/sharing-image.jpg">
         {{/if}}
 
-        <meta property="og:description" content="Grafisch ontwerper met een passie voor vormgeving en kunst.">
+        <meta property="og:description" content="{{general.description}}">
 
         <!-- Uncomment below if you want a video to appear when sharing on Facebook. -->
-        <!-- <meta property="og:video" content="https://www.facebook.com/KYMOOONE/videos/1253387631388633/"> -->
+        {{#if general.show_video_when_sharing_on_facebook}}
+            <meta property="og:video" content="{{general.facebook_video_url}}">
+        {{/if}}
 
         <script type="application/ld+json">
         {
             "@context": "http://schema.org",
             "@type": "LocalBusiness",
-            "url": "http://kymoone.be",
+            "name": "{{general.name}}",
+            "url": "{{general.website_root}}",
             "logo": "{{root}}assets/img/logo.svg",
             "contactPoint": [{
                 "@type": "ContactPoint",
-                "telephone": "+32 474 / 30 17 32",
-                "email": "kymo.one@outlook.com"
+                "telephone": "{{general.personal.telephone}}",
+                "email": "{{general.personal.email}}
             }],
             "founder": {
                 "@type": "Person",
-                "givenName": "Matthias",
-                "familyName": "Michiels",
-                "url": "{{root}}contact.html"
-            }
+                "givenName": "{{general.personal.first_name}}",
+                "familyName": "{{general.personal.last_name}}",
+                "url": "{{general.website_root}}"
+            },
+            "sameAs": [
+                "{{general.social.facebook_url}}",
+                "{{general.social.behance_url}}",
+                "{{general.social.instagram_url}}"
+            ]
         }
         </script>
 
@@ -61,6 +90,7 @@
         {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
         {{> body}}
 
-        {{> footer}}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.2/baguetteBox.min.js"></script>
+
     </body>
 </html>

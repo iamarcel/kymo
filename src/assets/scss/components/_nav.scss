@@ -1,36 +1,26 @@
 .nav {
-    @include flex-grid-row;
-    justify-content: space-around;
+    display: flex;
     font-weight: bold;
+    justify-content: flex-start;
+    flex-direction: column;
 
     margin: 0;
+    padding-bottom: ms(2);
 
-    a {
-        color: $body-font-color;
-    }
+    color: $white;
 
     &__col {
-        @include flex-grid-column();
         flex: 0 1 auto;
-        text-align: center;
+        text-align: left;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 
     &__item {
+        font-size: ms(1);
+        font-weight: bold;
         display: inline-block;
         justify-content: center;
         text-align: center;
-
-        transform: perspective(100vh);
-        transition: transform .2s ease-out, color .2s ease-out;
-
-        &:hover {
-            transform: perspective(100vh) translate3d(0, -1px, 10px);
-            color: lighten($body-font-color, 20%);
-        }
-
-        &:active {
-            transition: transform .1s ease-out;
-            transform: perspective(100vh) translate3d(0, -1px, -5px);
-        }
     }
 }

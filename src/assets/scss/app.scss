@@ -10,6 +10,8 @@ $ms-ratio: 1.5;
 
 @import 'toolkit';
 
+@import 'baguetteBox';
+
 @font-face {
     font-family: Brandon;
     src: url('../fonts/Brandon_reg.otf');
@@ -121,15 +123,6 @@ body {
     flex-direction: column;
 }
 
-main {
-    padding: 1.2*$header-height 0 0 0;
-    flex-grow: 1;
-
-    @include breakpoint(medium) {
-        padding-top: $header-height;
-    }
-}
-
 .hidden {
     display: none;
 }
@@ -186,5 +179,28 @@ main {
 
     @include breakpoint(medium) {
         display: block;
+    }
+}
+
+a {
+    transform: perspective(100vh);
+    transition: transform .2s ease-out, color .2s ease-out;
+
+    &:hover {
+        transform: perspective(100vh) translate3d(0, -1px, 10px);
+        color: lighten($body-font-color, 20%);
+    }
+
+    &:active {
+        transition: transform .1s ease-out;
+        transform: perspective(100vh) translate3d(0, -1px, -5px);
+    }
+
+    &.active {
+        color: $gold;
+    }
+
+    &.active:hover {
+        color: darken($gold, 20%);
     }
 }

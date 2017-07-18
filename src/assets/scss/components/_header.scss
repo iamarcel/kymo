@@ -1,67 +1,53 @@
 header {
-    @include flex-grid-row($width: 100%);
-    @include flex-align($x: center, $y: top);
-    justify-content: space-between;
 
-    height: 1.2 * $header-height;
-    @include breakpoint(medium) {
-        height: $header-height;
-    }
-
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-
-    padding: ms(1)/2;
-    padding-bottom: 0;
-    @include breakpoint(medium) {
-        padding: ms(1);
-    }
-
-    background: $body-background;
-
-    font-weight: bold;
-
-    // transition: border-width 0.1s ease-in-out;
-    // border-bottom: $global-border-style;
-    // border-bottom-width: 0;
-
-    // &.border {
-    //     border-bottom-width: $global-border-width;
-    //     box-shadow: 0 2px 3px rgba(0,0,0,.5);
-    // }
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
 
     .logo {
-        position: absolute;
-        left: 50%;
-        top: 50%;
+        height: ms(3);
+        margin-bottom: ms(1);
+        margin-top: ms(1);
+    }
 
-        transform: translate(-50%, 0);
+    padding: ms(1);
 
-        @include breakpoint(medium) {
-            transform: translate(-50%, -50%);
+    @include breakpoint(medium) {
+        flex: 1 20%;
+
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 25%;
+        height: 100%;
+
+        padding: ms(2);
+
+        .logo {
+            height: ms(4);
+            margin-top: 0;
         }
 
-        & > svg {
-            height: ms(1);
-            width: 100%;
+        .nav {
+            padding-bottom: ms(3);
+            flex-grow: 1;
+
+            &__item {
+                font-size: ms(2);
+            }
+
+            &__col {
+                padding: 0;
+            }
         }
     }
 
-    .nav {
-        width: 100%;
-        @include breakpoint(medium) {
-            width: auto;
-        }
+    @include breakpoint(large) {
+        padding: ms(3);
     }
 
-    .nav__col:first-child {
-        padding-left: 0;
-    }
-
-    .nav__col:last-child {
-        padding-right: 0;
+    @include breakpoint(xxlarge) {
+        padding: ms(4);
     }
 }

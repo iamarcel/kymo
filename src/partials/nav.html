@@ -1,17 +1,11 @@
 <nav class="nav">
-    <a href="{{root}}grafisch.html" class="nav__col">
+
+    {{#each categories}}
+    <a href="#" class="nav__col category-link" data-filters-category="{{@key}}">
         <span class="nav__item">
-            Grafisch
+            {{this.title}}
         </span>
     </a>
-    <a href="{{root}}graffiti.html" class="nav__col">
-        <span class="nav__item">
-            Graffiti
-        </span>
-    </a>
-    <a href="{{root}}vrij.html" class="nav__col">
-        <span class="nav__item">
-            Vrij Werk
-        </span>
-    </a>
+    {{/each}}
+
 </nav>

@@ -1,12 +1,18 @@
-<article class="portfolio__item" itemscope itemtype="http://schema.org/VisualArtwork">
+<article class="portfolio__item" itemscope itemtype="http://schema.org/VisualArtwork" data-category="{{project.category}}">
     <link rel="author" href="{{root}}contact.html" title="KYMO ONE">
-    <a href="{{root}}portfolio/{{project.short_name}}.html">
-        <div class="portfolio__item__preview">
-            <div class="portfolio__item__image" style="background-image: url(assets/img/{{project.short_name}}/{{project.thumbnail}})"></div>
-            <meta itemprop="image" content="{{root}}assets/img/{{project.short_name}}/{{thumbnail}}">
-        </div>
-        <div class="portfolio__item__content">
-            <h2 itemprop="name">{{project.name}}</h2>
-        </div>
-    </a>
+    {{#each project.photos}}
+        {{#if @first}}
+            <a href="{{root}}../assets/img/{{../project.short_name}}/{{this}}">
+                <div class="portfolio__item__preview">
+                    <div class="portfolio__item__image" style="background-image: url(assets/img/{{../project.short_name}}/{{../project.thumbnail}})"></div>
+                    <meta itemprop="image" content="{{root}}assets/img/{{../project.short_name}}/{{../project.thumbnail}}">
+                </div>
+                <div class="portfolio__item__content">
+                    <h2 itemprop="name">{{../project.name}}</h2>
+                </div>
+            </a>
+        {{else}}
+            <a href="{{root}}../assets/img/{{../project.short_name}}/{{this}}" style="display: none"></a>
+        {{/if}}
+    {{/each}}
 </article>

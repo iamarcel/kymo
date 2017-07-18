@@ -5,20 +5,22 @@
 ul.social-icons {
     @extend .no-bullet;
     @include flex-grid-row($behavior: collapse, $width: 100%);
-    margin: ms(1)/2 0;
+    margin: 0;
 
     li {
         @include flex-grid-column($columns: shrink, $gutter: 0);
-        padding-left: ms(1)/4;
-        padding-right: ms(1)/4;
+        padding: ms(1)/4;
 
         @include breakpoint(medium) {
-            padding-left: ms(1)/2;
-            padding-right: ms(1)/2;
+            padding: ms(1)/2;
         }
 
         &:first-child {
             padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
         }
     }
 }

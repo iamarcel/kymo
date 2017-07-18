@@ -1,10 +1,4 @@
----
-title: Contact
----
-
-{{> header}}
-
-<main class="container" itemscope itemtype="http://schema.org/Person">
+<div class="page--contact" itemscope itemtype="http://schema.org/Person">
 
     <meta itemprop="image" content="https://graph.facebook.com/v2.8/691677397559662/picture?type=large">
     <link itemprop="brand" content="{{root}}">
@@ -18,17 +12,17 @@ title: Contact
     <div class="row align-center">
         <div class="medium-8 large-6 columns">
             <h2>
-                <span itemprop="givenName">Matthias</span>
-                <span itemprop="familyName">Michiels</span>
+                <span itemprop="givenName">{{general.personal.first_name}}</span>
+                <span itemprop="familyName">{{general.personal.last_name}}</span>
             </h2>
             <p class="lead">
-                Grafisch ontwerper met een passie voor vormgeving en kunst.
+                {{general.description}}
             </p>
             <div class="row contact-card">
                 <div class="medium-6 columns">
                     <p>
                         <a href="mailto:kymo.one@outlook.com" class="underline" itemprop="email">kymo.one@outlook.com</a><br>
-                        <span itemprop="telephone">+32 474 / 30 17 32</span>
+                        <span itemprop="telephone">{{general.personal.telephone}}</span>
                     </p>
                 </div>
                 <div class="medium-6 columns">
@@ -41,6 +35,5 @@ title: Contact
             </div>
         </div>
     </div>
-
 
 </main>
