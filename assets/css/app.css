@@ -4300,12 +4300,13 @@ header {
           padding: 0; } }
   @media screen and (min-width: 64em) {
     header {
-      padding: 3.375rem; }
+      padding: 3.375rem;
+      /* .nav__item { */
+      /*     font-size: ms(2); */
+      /* } */ }
       header .logo {
         height: 5.0625rem;
-        margin-top: 0; }
-      header .nav__item {
-        font-size: 2.25rem; } }
+        margin-top: 0; } }
   @media screen and (min-width: 90em) {
     header {
       padding: 5.0625rem; } }
@@ -4695,3 +4696,9 @@ a {
     color: #f3dd6d; }
   a.active:hover {
     color: #e7c413; }
+
+.baguetteBox-button {
+  background: none;
+  color: #fefefe; }
+  .baguetteBox-button:hover, .baguetteBox-button:active, .baguetteBox-button:focus {
+    background: none; }
