@@ -204,3 +204,12 @@ a {
         color: darken($gold, 20%);
     }
 }
+
+.baguetteBox-button {
+    background: none;
+    color: $white;
+
+    &:hover, &:active, &:focus {
+        background: none;
+    }
+}

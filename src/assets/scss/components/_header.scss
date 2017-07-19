@@ -42,9 +42,9 @@ header {
             margin-top: 0;
         }
 
-        .nav__item {
-            font-size: ms(2);
-        }
+        /* .nav__item { */
+        /*     font-size: ms(2); */
+        /* } */
     }
 
     @include breakpoint(xxlarge) {
