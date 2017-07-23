@@ -8,21 +8,6 @@ anonymous_skull:
     - anonymous-skull-2.jpg
     - anonymous-skull-3.jpg
     - anonymous-skull-4.jpg
-  previous: gouden-eeuw
-  next: gouden-eeuw
-
-anonymous_skull2:
-  name: Anonymous Skull
-  short_name: anonymous-skull
-  category: murals
-  thumbnail: anonymous-skull-1.jpg
-  photos:
-    - anonymous-skull-1.jpg
-    - anonymous-skull-2.jpg
-    - anonymous-skull-3.jpg
-    - anonymous-skull-4.jpg
-  previous: gouden-eeuw
-  next: gouden-eeuw
 
 gouden_eeuw:
   name: Gouden Eeuw
@@ -34,18 +19,76 @@ gouden_eeuw:
     - gouden-eeuw-2.jpg
     - gouden-eeuw-3.jpg
     - gouden-eeuw-4.jpg
-  previous: anonymous-skull
-  next: anonymous-skull
 
-anonymous_skull3:
-  name: Anonymous Skull
-  short_name: anonymous-skull
-  category: vrij_werk
-  thumbnail: anonymous-skull-1.jpg
+factory_m:
+  name: Factory M
+  short_name: factory-m
+  category: murals
+  thumbnail: 1.jpg
   photos:
-    - anonymous-skull-1.jpg
-    - anonymous-skull-2.jpg
-    - anonymous-skull-3.jpg
-    - anonymous-skull-4.jpg
-  previous: gouden-eeuw
-  next: gouden-eeuw
+    - 1.jpg
+    - 2.jpg
+
+graffitimuur_geraardsbergen:
+  name: Graffitimuur Geraardsbergen
+  short_name: graffitimuur-geraardsbergen
+  category: murals
+  thumbnail: 1.jpg
+  photos:
+    - 1.jpg
+    - 2.jpg
+
+lockers:
+  name: Lockers
+  short_name: lockers
+  category: murals
+  thumbnail: 1.jpg
+  photos:
+    - 1.jpg
+    - 2.jpg
+    - 3.jpg
+
+tandarts:
+  name: Tandarts
+  short_name: tandarts
+  category: murals
+  thumbnail: 1.jpg
+  photos:
+    - 1.jpg
+    - 2.jpg
+    - 3.jpg
+
+atlantis:
+  name: Atlantis
+  short_name: atlantis
+  category: grafisch
+  thumbnail: 1.jpg
+  photos:
+    - 1.jpg
+    - 2.jpg
+
+woorden_vd_week:
+  name: Woorden van de Week
+  short_name: woorden-van-de-week
+  category: grafisch
+  thumbnail: 1.jpg
+  photos:
+    - 1.jpg
+    - 2.jpg
+    - 3.jpg
+    - 4.jpg
+
+bio_vs_industrieel:
+  name: Bio vs. Industrieel
+  short_name: bio-vs-industrieel
+  category: grafisch
+  thumbnail: 1.jpg
+  photos:
+    - 1.jpg
+    - 2.jpg
+    - 3.jpg
+    - 4.jpg
+    - 5.jpg
+    - 6.jpg
+    - 7.jpg
+    - 8.jpg
