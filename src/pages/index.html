@@ -49,9 +49,7 @@
     <div class="portfolio">
 
         {{#each portfolio}}
-        {{#if this.show_on_home}}
             {{> portfolio__item project=this}}
-        {{/if}}
         {{/each}}
 
     </div>

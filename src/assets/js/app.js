@@ -96,6 +96,9 @@ $(function () {
         if ($target.hasClass('active') || $target.hasClass('all-categories')) {
             $('.portfolio__item').css('display', 'block');
             $('.category-link').removeClass('active');
+
+            $('.portfolio__item').css('display', 'none');
+            $('.portfolio__item[data-on-home="true"]').css('display', 'block');
         } else {
             $('.category-link').removeClass('active');
             $target.addClass('active');
@@ -114,7 +117,8 @@ $(function () {
         let $target = $(e.currentTarget);
 
         $('.category-link').removeClass('active');
-        $('.portfolio__item').css('display', 'block');
+        $('.portfolio__item').css('display', 'none');
+        $('.portfolio__item[data-on-home="true"]').css('display', 'block');
 
         if ($target.hasClass('active')) {
             $('.portfolio').css('display', 'flex');
@@ -132,6 +136,9 @@ $(function () {
         e.stopPropagation();
         return false;
     });
+
+    $('.portfolio__item').css('display', 'none');
+    $('.portfolio__item[data-on-home="true"]').css('display', 'block');
 
     baguetteBox.run('.portfolio__item');
     baguetteBox.run('.baguette');
