@@ -81,7 +81,7 @@
 
         &:active {
             transition: transform .1s ease-out;
-            transform: perspective(100vh) translate3d(0, -3px, -5px) scale(1.1)
+            transform: perspective(100vh) translate3d(0, -3px, -5px) scale(1.1);
         }
 
         & > * {
