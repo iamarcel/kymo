@@ -60,6 +60,7 @@ tandarts:
 
 atlantis:
   name: Atlantis
+  on_home: true
   short_name: atlantis
   category: grafisch
   thumbnail: 1.jpg
