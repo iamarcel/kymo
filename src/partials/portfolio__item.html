@@ -1,8 +1,8 @@
 <article class="portfolio__item" itemscope itemtype="http://schema.org/VisualArtwork" data-category="{{project.category}}" data-on-home="{{project.on_home}}">
     <link rel="author" href="{{root}}contact.html" title="KYMO ONE">
-    {{#each project.photos}}
+    {{#each project.slides}}
         {{#if @first}}
-            <a href="{{root}}assets/img/{{../project.short_name}}/{{this}}">
+            <a data-fancybox="project-{{../project.short_name}}" href="{{root}}assets/img/{{../project.short_name}}/{{content}}">
                 <div class="portfolio__item__preview">
                     <div class="portfolio__item__image" style="background-image: url(assets/img/{{../project.short_name}}/{{../project.thumbnail}})"></div>
                     <meta itemprop="image" content="{{root}}assets/img/{{../project.short_name}}/{{../project.thumbnail}}">
@@ -12,7 +12,14 @@
                 </div>
             </a>
         {{else}}
-            <a href="{{root}}assets/img/{{../project.short_name}}/{{this}}" style="display: none"></a>
+            {{#if text}}
+                <div style="display: none;" id="{{../project.short_name}}-{{@index}}">
+                    {{content}}
+                </div>
+                <a data-fancybox="project-{{../project.short_name}}" href="javascript:;" data-src="#{{../project.short_name}}-{{@index}}" style="display: none;"></a>
+            {{else}}
+                <a data-fancybox="project-{{../project.short_name}}" href="{{root}}assets/img/{{../project.short_name}}/{{content}}" style="display: none;"></a>
+            {{/if}}
         {{/if}}
     {{/each}}
 </article>

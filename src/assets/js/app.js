@@ -140,7 +140,8 @@ $(function () {
     $('.portfolio__item').css('display', 'none');
     $('.portfolio__item[data-on-home="true"]').css('display', 'block');
 
-    baguetteBox.run('.portfolio__item');
-    baguetteBox.run('.baguette');
+    $('[data-fancybox]').fancybox({
+        
+    });
 
 });

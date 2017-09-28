@@ -10,7 +10,7 @@ $ms-ratio: 1.5;
 
 @import 'toolkit';
 
-@import 'baguetteBox';
+@import 'jquery.fancybox';
 
 @font-face {
     font-family: Brandon;
@@ -99,6 +99,7 @@ $global-border-style: $global-border-width solid $white;
 @import 'components/portfolio';
 @import 'components/portfolio-item';
 @import 'components/contact';
+@import 'components/intro';
 
 h1 {
     font-weight: 700;
@@ -205,11 +206,8 @@ a {
     }
 }
 
-.baguetteBox-button {
-    background: none;
-    color: $white;
-
-    &:hover, &:active, &:focus {
-        background: none;
-    }
+.fancybox-slide--inline > div {
+    background: $body-background;
+    width: 600px;
+    max-width: 100%;
 }
