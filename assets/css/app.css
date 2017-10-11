@@ -2239,6 +2239,10 @@ textarea {
   textarea[rows] {
     height: auto; }
 
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #cacaca; }
+
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: #cacaca; }
@@ -5257,5 +5261,12 @@ a {
 
 .fancybox-slide--inline > div {
   background: #000;
-  width: 600px;
-  max-width: 100%; }
+  width: 80%;
+  height: 80%;
+  color: #fefefe; }
+
+.fancybox-thumbs {
+  background: transparent; }
+
+.fancybox-thumbs > ul > li:before {
+  border-color: #f3dd6d; }
