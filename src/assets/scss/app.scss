@@ -208,6 +208,15 @@ a {
 
 .fancybox-slide--inline > div {
     background: $body-background;
-    width: 600px;
-    max-width: 100%;
+    width: 80%;
+    height: 80%;
+    color: $white;
+}
+
+.fancybox-thumbs {
+    background: transparent;
+}
+
+.fancybox-thumbs > ul > li:before {
+    border-color: $gold;
 }

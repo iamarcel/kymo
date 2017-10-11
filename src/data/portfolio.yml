@@ -7,7 +7,7 @@ anonymous_skull:
     - text: false
       content: anonymous-skull-1.jpg
     - text: true
-      content: Hello World
+      content: "<h1>Hello World!</h1><p>This is my comment text.</p>"
     - text: false
       content: anonymous-skull-2.jpg
     - text: false

@@ -141,7 +141,7 @@ $(function () {
     $('.portfolio__item[data-on-home="true"]').css('display', 'block');
 
     $('[data-fancybox]').fancybox({
-        
+      toolbar: false,
     });
 
 });
