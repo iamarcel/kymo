@@ -211,6 +211,14 @@ a {
     width: 80%;
     height: 80%;
     color: $white;
+
+    @include breakpoint(medium) {
+        padding: ms(5);
+    }
+}
+
+.fancybox-close-small {
+    display: none;
 }
 
 .fancybox-thumbs {
