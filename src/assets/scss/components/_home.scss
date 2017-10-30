@@ -1,11 +1,13 @@
 .home {
-    flex-grow: 1;
+    height: 100%;
+    width: 100%;
 
     @include breakpoint(medium) {
 
         display: flex;
         flex-flow: row;
-        align-items: flex-start;
+        align-items: stretch;
+        align-content: stretch;
 
         .header-placeholder {
             flex: 1;
@@ -18,7 +20,6 @@
 
     .portfolio, .info {
         padding: ms(1)/2 0;
-        min-height: 100%;
 
         @include breakpoint(medium) {
             padding: ms(2);
