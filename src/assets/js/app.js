@@ -90,22 +90,22 @@ $(function () {
         let $target = $(e.currentTarget);
 
         $('.info-link').removeClass('active');
-        $('.portfolio').css('display', 'flex');
+        $('.portfolio').css('display', '');
         $('.info').css('display', 'none');
 
         if ($target.hasClass('active') || $target.hasClass('all-categories')) {
-            $('.portfolio__item').css('display', 'block');
+            $('.portfolio__item').css('display', '');
             $('.category-link').removeClass('active');
 
             $('.portfolio__item').css('display', 'none');
-            $('.portfolio__item[data-on-home="true"]').css('display', 'block');
+            $('.portfolio__item[data-on-home="true"]').css('display', '');
         } else {
             $('.category-link').removeClass('active');
             $target.addClass('active');
 
             let categoryId = $target.attr('data-filters-category');
             $('.portfolio__item').css('display', 'none');
-            $('.portfolio__item[data-category="' + categoryId + '"]').css('display', 'block');
+            $('.portfolio__item[data-category="' + categoryId + '"]').css('display', '');
         }
 
         e.preventDefault();
@@ -118,16 +118,16 @@ $(function () {
 
         $('.category-link').removeClass('active');
         $('.portfolio__item').css('display', 'none');
-        $('.portfolio__item[data-on-home="true"]').css('display', 'block');
+        $('.portfolio__item[data-on-home="true"]').css('display', '');
 
         if ($target.hasClass('active')) {
-            $('.portfolio').css('display', 'flex');
+            $('.portfolio').css('display', '');
             $('.info').css('display', 'none');
 
             $target.removeClass('active');
         } else {
             $('.portfolio').css('display', 'none');
-            $('.info').css('display', 'block');
+            $('.info').css('display', '');
 
             $target.addClass('active');
         }
@@ -138,7 +138,7 @@ $(function () {
     });
 
     $('.portfolio__item').css('display', 'none');
-    $('.portfolio__item[data-on-home="true"]').css('display', 'block');
+    $('.portfolio__item[data-on-home="true"]').css('display', '');
 
     $('[data-fancybox]').fancybox({
       toolbar: false,

@@ -1,9 +1,20 @@
-.page--contact {
-    .hero-image {
-        margin-bottom: ms(3);
-    }
+.info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: white;
+  font-size: ms(1);
+  font-weight: bold;
 
-    .contact-card {
-        margin-top: ms(3);
-    }
+  .hero {
+    flex-grow: 1;
+  }
+
+  .hero-image {
+    margin-bottom: ms(3);
+  }
+
+  .contact-card {
+    margin-top: ms(3);
+  }
 }

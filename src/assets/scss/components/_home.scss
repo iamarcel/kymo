@@ -18,6 +18,7 @@
 
     .portfolio, .info {
         padding: ms(1)/2 0;
+        min-height: 100%;
 
         @include breakpoint(medium) {
             padding: ms(2);

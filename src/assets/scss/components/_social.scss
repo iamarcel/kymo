@@ -10,9 +10,11 @@ ul.social-icons {
     li {
         @include flex-grid-column($columns: shrink, $gutter: 0);
         padding: ms(1)/4;
+        padding-bottom: 0;
 
         @include breakpoint(medium) {
             padding: ms(1)/2;
+            padding-bottom: 0;
         }
 
         &:first-child {
